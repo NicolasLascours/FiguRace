@@ -1,58 +1,58 @@
 Ubicación,Superficie (km²),Profundidad máxima (m),Profundidad media (m),Coordenadas,Nombre
 Santa Cruz,1435,500,150,"-50.248056, -72.645278",Lago Argentino
-Santa Cruz,1166,¿?,¿?,"-49.624167, -72.495000",Lago Viedma
+Santa Cruz,1166,,,"-49.624167, -72.495000",Lago Viedma
 Río Negro / Neuquén,540,464,157,"-40.854444, -71.616111",Lago Nahuel Huapi
 Chubut,427,39,20,"-45.414722, -69.197778",Lago Musters
-Santa Cruz,358,¿?,49,"-48.917500, -71.214722",Lago Cardiel
+Santa Cruz,358,,49,"-48.917500, -71.214722",Lago Cardiel
 Buenos Aires,156,11,7,"-37.129167, -62.864722",Lago Epecuén
-Río Negro,116,¿?,¿?,"-38.706944, -67.973056",Lago Pellegrini
-Santa Cruz,100,¿?,¿?,"-48.432778, -71.190278",Lago Strobel
-Chubut,84,¿?,79,"-44.921389, -71.495833",Lago Fontana
-Neuquén,84,¿?,142,"-39.774444, -71.508889",Lago Huechulafquen
-Neuquén,78,¿?,¿?,"-40.630556, -71.415278",Lago Traful
-Chubut,73,¿?,¿?,"-44.859167, -71.820000",Lago La Plata
-Santa Cruz,65,¿?,¿?,"-47.288333, -71.530278",Lago Ghío
+Río Negro,116,,,"-38.706944, -67.973056",Lago Pellegrini
+Santa Cruz,100,,,"-48.432778, -71.190278",Lago Strobel
+Chubut,84,,79,"-44.921389, -71.495833",Lago Fontana
+Neuquén,84,,142,"-39.774444, -71.508889",Lago Huechulafquen
+Neuquén,78,,,"-40.630556, -71.415278",Lago Traful
+Chubut,73,,,"-44.859167, -71.820000",Lago La Plata
+Santa Cruz,65,,,"-47.288333, -71.530278",Lago Ghío
 Chubut,58,287,149,"-42.691111, -71.862500",Lago Menéndez
 Neuquén,58,165,64,"-38.921667, -71.126389",Lago Aluminé
 Neuquén,53,277,166,"-40.162500, -71.436389",Lago Lácar
-"Tierra del Fuego, Antártida e Islas del Atlántico Sur",49,¿?,43,"-54.411944, -67.715278",Lago Yehuin
-Santa Cruz,47,¿?,¿?,"-48.416944, -71.550833",Lago Quiroga
+"Tierra del Fuego, Antártida e Islas del Atlántico Sur",49,,43,"-54.411944, -67.715278",Lago Yehuin
+Santa Cruz,47,,,"-48.416944, -71.550833",Lago Quiroga
 Chubut,47,180,111,"-42.150833, -71.649722",Lago Puelo
-Santa Cruz,42,¿?,¿?,"-47.978889, -72.353056",Lago Nansen
-Santa Cruz,42,¿?,¿?,"-47.843889, -72.142778",Lago Belgrano
+Santa Cruz,42,,,"-47.978889, -72.353056",Lago Nansen
+Santa Cruz,42,,,"-47.843889, -72.142778",Lago Belgrano
 Chubut,42,168,101,"-42.828333, -71.675278",Lago Futalaufquen
-Santa Cruz,41,¿?,31,"-47.494444, -71.831944",Lago Posadas
-Neuquén,40,¿?,¿?,"-40.675833, -71.711111",Lago Espejo
+Santa Cruz,41,,31,"-47.494444, -71.831944",Lago Posadas
+Neuquén,40,,,"-40.675833, -71.711111",Lago Espejo
 Río Negro,39,218,111,"-41.346111, -71.547778",Lago Mascardi
-"Tierra del Fuego, Antártida e Islas del Atlántico Sur",38,¿?,¿?,"-54.395000, -67.593333",Lago Chepelmut
-Santa Cruz,37,¿?,¿?,"-47.500000, -71.613333",Lago Salitroso o Sucio
-Neuquén,37,¿?,¿?,"-40.036111, -71.536389",Lago Lolog
-Santa Cruz,30,¿?,¿?,"-49.228333, -72.017222",Lago Tar
-Neuquén,29,¿?,69,"-39.525833, -71.447778",Lago Tromen
-Chubut,28,¿?,¿?,"-45.887778, -71.223611",Lago Blanco
-Neuquén,26,¿?,¿?,"-39.411389, -71.314444",Lago Quillén
-Santa Cruz,23,¿?,¿?,"-47.862500, -71.470278",Lago Asador o Guitarra
+"Tierra del Fuego, Antártida e Islas del Atlántico Sur",38,,,"-54.395000, -67.593333",Lago Chepelmut
+Santa Cruz,37,,,"-47.500000, -71.613333",Lago Salitroso o Sucio
+Neuquén,37,,,"-40.036111, -71.536389",Lago Lolog
+Santa Cruz,30,,,"-49.228333, -72.017222",Lago Tar
+Neuquén,29,,69,"-39.525833, -71.447778",Lago Tromen
+Chubut,28,,,"-45.887778, -71.223611",Lago Blanco
+Neuquén,26,,,"-39.411389, -71.314444",Lago Quillén
+Santa Cruz,23,,,"-47.862500, -71.470278",Lago Asador o Guitarra
 Chubut,23,147,104,"-42.610833, -71.666389",Lago Rivadavia
-Neuquén,21,¿?,¿?,"-38.904444, -71.273889",Lago Moquehue
-Neuquén,20,¿?,¿?,"-40.702222, -71.659722",Lago Correntoso
-Chubut,20,¿?,¿?,"-45.594444, -68.547778",Lago Río Chico
-Santa Cruz,20,¿?,¿?,"-48.499167, -71.584722",Lago Quiroga Chico
+Neuquén,21,,,"-38.904444, -71.273889",Lago Moquehue
+Neuquén,20,,,"-40.702222, -71.659722",Lago Correntoso
+Chubut,20,,,"-45.594444, -68.547778",Lago Río Chico
+Santa Cruz,20,,,"-48.499167, -71.584722",Lago Quiroga Chico
 Chubut,17,148,92,"-42.187500, -71.506667",Lago Epuyén
 Río Negro,17,111,80,"-41.207778, -71.420278",Lago Gutiérrez
 Chubut,17,108,49,"-42.458611, -71.669167",Lago Cholila
-Neuquén,16,¿?,66,"-39.724167, -71.583889",Lago Paimún
-Santa Cruz,16,¿?,¿?,"-47.845833, -72.270278",Lago Azara
-Santa Cruz,14,¿?,¿?,"-47.955556, -72.202500",Lago Burmeister
-Santa Cruz,14,¿?,¿?,"-50.108333, -73.349722",Lago Onelli
-Neuquén,14,¿?,¿?,"-40.333333, -71.319444",Lago Meliquina
-Río Negro,12,¿?,¿?,"-41.066111, -71.541111",Lago Perito Moreno
-Neuquén,12,¿?,¿?,"-39.840000, -71.507500",Lago Currhué
-Neuquén,11,¿?,¿?,"-40.485000, -71.475833",Lago Falkner
-Chubut,10,¿?,¿?,"-44.241944, -71.502222",Lago Pico Nº 1
-"Tierra del Fuego, Antártida e Islas del Atlántico Sur",10,¿?,¿?,"-54.688611, -65.806389",Lago Río Bueno
+Neuquén,16,,66,"-39.724167, -71.583889",Lago Paimún
+Santa Cruz,16,,,"-47.845833, -72.270278",Lago Azara
+Santa Cruz,14,,,"-47.955556, -72.202500",Lago Burmeister
+Santa Cruz,14,,,"-50.108333, -73.349722",Lago Onelli
+Neuquén,14,,,"-40.333333, -71.319444",Lago Meliquina
+Río Negro,12,,,"-41.066111, -71.541111",Lago Perito Moreno
+Neuquén,12,,,"-39.840000, -71.507500",Lago Currhué
+Neuquén,11,,,"-40.485000, -71.475833",Lago Falkner
+Chubut,10,,,"-44.241944, -71.502222",Lago Pico Nº 1
+"Tierra del Fuego, Antártida e Islas del Atlántico Sur",10,,,"-54.688611, -65.806389",Lago Río Bueno
 Chubut,10,57,25,"-43.260000, -71.346667",Lago Rosario
-Santa Cruz,843,¿?,¿?,"-46.435278, -71.713611",Lago Buenos Aires
-Santa Cruz,537,¿?,¿?,"-48.896111, -72.697778",Lago San Martín
-"Tierra del Fuego, Antártida e Islas del Atlántico Sur",533,¿?,81,"-54.564722, -67.889722",Lago Fagnano
-Santa Cruz,125,¿?,¿?,"-47.356667, -71.930833",Lago Pueyrredón
-Chubut,96,¿?,¿?,"-43.931111, -71.534722",Lago General Vintter
+Santa Cruz,843,,,"-46.435278, -71.713611",Lago Buenos Aires
+Santa Cruz,537,,,"-48.896111, -72.697778",Lago San Martín
+"Tierra del Fuego, Antártida e Islas del Atlántico Sur",533,,81,"-54.564722, -67.889722",Lago Fagnano
+Santa Cruz,125,,,"-47.356667, -71.930833",Lago Pueyrredón
+Chubut,96,,,"-43.931111, -71.534722",Lago General Vintter
