@@ -1,36 +1,61 @@
+#zona de imports
 import PySimpleGUI as sg
+from .layouts.layout_configuracion import layout
+from .handlers.handler_configuracion import evento_config
 import json
-def ventana_configuracion():
+
+def verificar_json(values): # cambiar por if's
+    """ 
+    este modulo verifica si se ingresaron todas las
+    configuraciones requeridas
+    """
+    b = True 
+    if values['Tiempo'] == '30' or values['Tiempo'] == '60' or values['Tiempo'] == '90' or values['Tiempo'] == '120':
+        pass
+    else:
+        sg.PopupError('Se ha ingresado un valor para el tiempo que esta incorrecto')
+        b = False
+    if values['Rondas'] == '1' or values['Rondas'] == '2' or values['Rondas'] == '3' or values['Rondas'] == '4' or values['Rondas'] == '5' or values['Rondas'] == '6' or values['Rondas'] == '7' or values['Rondas'] == '8' or values['Rondas'] == '9' or values['Rondas'] == '10':
+        pass
+    else:
+        sg.PopupError('Se ha ingresado un valor para las rondas que esta incorrecto')
+        b = False
+    if values['Puntaje Sumado'] == '10' or values['Puntaje Sumado'] == '30' or values['Puntaje Sumado'] == '50' or values['Puntaje Sumado'] == '60' or values['Puntaje Sumado'] == '80' or values['Puntaje Sumado'] == '100':
+        pass
+    else:
+        sg.PopupError('Se ha ingresado un valor para el valor de puntaje correcto el cual esta incorrecto')
+        b = False
+    if values['Puntaje Restado'] == '10' or values['Puntaje Restado'] == '30' or values['Puntaje Restado'] == '50' or values['Puntaje Restado'] == '60' or values['Puntaje Restado'] == '80' or values['Puntaje Restado'] == '100':
+        pass
+    else:
+        sg.PopupError('Se ha ingresado un valor para los puntajes restados de los cual esta incorrecto')
+        b = False
+    if values['Caracteristicas'] == '1' or values['Caracteristicas'] == '3' or values['Caracteristicas'] == '5':
+        pass
+    else:
+        sg.PopupError('Se ha ingresado un valor para las caracticas el cual esta incorrecto')
+        b = False
+    return b 
+
+def ventana_configuracion(): # arreglar el false y el for 
+    """
+    funcion que ejecuta la ventana con su 
+    diseño propio, con todas las funcionalidades 
+    requeridas para la configuracion del juego
+    """
     sg.theme('LightBlue4')
-    # layout de la pantalla de configuracion 
-    layout = [
-           [sg.Text('Tiempo limite por ronda')],
-           [sg.Combo(['30', '60', '90', '120'], key="Tiempo")], 
-           [sg.Text('Cantidad de rondas')],
-           [sg.Combo(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], key='Rondas')], 
-           [sg.Text('Puntaje a sumar por respuesta correcta')],
-           [sg.Combo(['10', '30', '50', '60', '80', '100'], key='Puntaje Sumado')],
-           [sg.Text('Puntaje a restar por respuesta incorrecta')],
-           [sg.Combo(['10', '30', '50', '60', '80', '100'], key='Puntaje Restado')],
-           [sg.Text('Cantidad de caracteristicas a mostrar en pantalla')],
-           [sg.Combo(['1', '3', '5'], key='Caracteristicas')], # verificar datos del dataset, o sea si son 5 columnas en el data set se puede hacer hasta 5 
-           [sg.Submit(), sg.Text('    '), sg.Button('Volver')]
-           ]
     # variable ventana con las caracteristicas de la misma
-    ventana = sg.Window('Configuracion', layout, size=(350, 300)) # ventana variable que tiene los layout y el tamaño de pantalla
+    lista = layout()
+    ventana = sg.Window('Configuracion', lista, size=(350, 300)) # ventana variable que tiene los layout y el tamaño de pantalla
     # ejecucion del while
     while True:
       ventana.refresh()
       evento, values = ventana.read()
-      if (evento == 'Submit'):
-         with open ('config.json', 'w') as archivo_json:
-             json.dump(values, archivo_json)
-         sg.popup_ok('Las configuraciones han sido guardadas con exito')
       if evento == sg.WIN_CLOSED or evento == 'Volver': # cuando se pueda hacer que cuando aprete volver vuelva a la pantalla inicial del juego
           break
+      b = verificar_json(values)
+      evento_config(b, evento, values)
     ventana.close()
-
-ventana_configuracion()
 
 # puede pasar que el usuario no ingrese una configuracion, por lo tanto, hay que ver si se puede dar que se le de una configuracion por defecto o se le obligue a insertar una 
 # insertar los datos dentro de un archivo json, mucho cuidado aca porque puede que no o que si exista ya un archivo json
