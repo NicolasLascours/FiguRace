@@ -3,6 +3,7 @@ from .layouts.layout_perfiles import layout_perfiles
 from .handlers.handler_perfiles import handler_perfiles
 import PySimpleGUI as sg
 
+
 def ventana_perfiles():
     # creo ventana perfiles
     sg.theme('LightBlue4')
@@ -13,7 +14,9 @@ def ventana_perfiles():
         if event == sg.WIN_CLOSED or event == "Volver":
             break
         else:
+            window.Hide()
             # llamo al modulo handler pasandole el evento que se produjo
             handler_perfiles(event)
+            window.UnHide()
     # cierro la ventana
     window.close()
