@@ -13,7 +13,9 @@ def ventana_puntajes():
         if event == sg.WIN_CLOSED or event == "Volver":
             break
         else:
+            window.Hide()
             # llamo al modulo handler pasandole el evento que se produjo
             handler_puntajes(event)
+            window.UnHide()
     # cierro la ventana
     window.close()
