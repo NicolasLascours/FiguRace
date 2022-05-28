@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 [{"nick": "invitado", "edad": "ninguna", "genero": "ninguno"}]
+=======
+[{"nick": "invitado", "edad": "ninguna", "genero": "ninguno"}, {"nick": "franco", "edad": "20", "genero": "masculino"}]
+>>>>>>> mejora pantalla inicio
