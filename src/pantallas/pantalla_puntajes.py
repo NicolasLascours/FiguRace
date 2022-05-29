@@ -3,6 +3,7 @@ from .layouts.layout_puntajes import layout_puntajes
 from .handlers.handler_puntajes import handler_puntajes
 import PySimpleGUI as sg
 
+
 def ventana_puntajes():
     # creo ventana puntajes
     sg.theme('LightBlue4')

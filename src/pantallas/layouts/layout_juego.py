@@ -1,19 +1,21 @@
 import PySimpleGUI as sg
 import json
-import os
 from ..handlers.handler_juego import abrir_configuracion
 
-def abrir_archivo ():
+
+def abrir_archivo():
     """
     funcion para poder abrir el archivo json
     de las configuraciones del juego
     """
-    with open ('config.json', 'r') as archivo:
+    with open('config.json', 'r') as archivo:
         datos = json.load(archivo)
     return datos
 
 # layout de la pantalla del juego
-def layouts ():
+
+
+def layouts():
     """
     funcion que define el diseño de la 
     pantalla del juego 

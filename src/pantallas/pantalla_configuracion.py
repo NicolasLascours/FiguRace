@@ -1,10 +1,10 @@
-#zona de imports
+# zona de imports
 import PySimpleGUI as sg
 from .layouts.layout_configuracion import layout
 from .handlers.handler_configuracion import evento_config
-import json
 
-def verificar_json(values): # cambiar por if's
+
+def verificar_json(values):  # cambiar por if's
     """ 
     este modulo verifica si se ingresaron todas las
     configuraciones requeridas
@@ -37,7 +37,8 @@ def verificar_json(values): # cambiar por if's
         b = False
     return b 
 
-def ventana_configuracion(): # arreglar el false y el for 
+
+def ventana_configuracion():  # arreglar el false y el for
     """
     funcion que ejecuta la ventana con su 
     diseño propio, con todas las funcionalidades 
@@ -46,16 +47,17 @@ def ventana_configuracion(): # arreglar el false y el for
     sg.theme('LightBlue4')
     # variable ventana con las caracteristicas de la misma
     lista = layout()
-    ventana = sg.Window('Configuracion', lista, size=(350, 300)) # ventana variable que tiene los layout y el tamaño de pantalla
+    ventana = sg.Window('Configuracion', lista, size=(350, 300))  # ventana variable que tiene los layout y el tamaño de pantalla
     # ejecucion del while
     while True:
       ventana.refresh()
       evento, values = ventana.read()
-      if evento == sg.WIN_CLOSED or evento == 'Volver': # cuando se pueda hacer que cuando aprete volver vuelva a la pantalla inicial del juego
+      if evento == sg.WIN_CLOSED or evento == 'Volver':  # cuando se pueda hacer que cuando aprete volver vuelva a la pantalla inicial del juego
           break
       b = verificar_json(values)
       evento_config(b, evento, values)
     ventana.close()
 
-# puede pasar que el usuario no ingrese una configuracion, por lo tanto, hay que ver si se puede dar que se le de una configuracion por defecto o se le obligue a insertar una 
+# puede pasar que el usuario no ingrese una configuracion, por lo tanto,
+# hay que ver si se puede dar que se le de una configuracion por defecto o se le obligue a insertar una
 # insertar los datos dentro de un archivo json, mucho cuidado aca porque puede que no o que si exista ya un archivo json
