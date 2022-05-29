@@ -1,11 +1,11 @@
 # modulo para generar la ventana principal
-import json
 import PySimpleGUI as sg
 from .layouts.layout_principal import layouts_prin
 from .handlers.handler_principal import eventos
 
-def start ():
-    ventana = sg.Window('FiguRace', layouts_prin(), size=(500,300))
+
+def start():
+    ventana = sg.Window('FiguRace', layouts_prin(), size=(500, 300))
     # creacion de ventana
     while True:
         evento = ventana.read()

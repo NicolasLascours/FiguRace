@@ -1,6 +1,7 @@
 # importo modulos
 import PySimpleGUI as sg
 
+
 def layout_puntajes():
     """crea el layout para la pantalla puntajes"""
     # creo el layout
