@@ -1,16 +1,11 @@
-<<<<<<< HEAD
-=======
 import json
 import PySimpleGUI as sg
 from src.pantallas.handlers.handler_juego import abrir_configuracion
->>>>>>> mejora pantalla inicio
 from ..pantalla_configuracion import ventana_configuracion
 from ..pantalla_juego import comenzar
 from ..pantalla_puntajes import ventana_puntajes
 from ..pantalla_perfiles import ventana_perfiles
 
-<<<<<<< HEAD
-=======
 def elegirperfil():
      """
      Funcion que genera una lista con los nick de 
@@ -48,22 +43,16 @@ def cargarConfig(dif):
           json.dump(dicc, archivo)
           sg.popup_ok('Se han actualizado las configuraciones para la dificultad ', dif)
 
->>>>>>> mejora pantalla inicio
 def eventos(evento, ventana):
     """
     funcion que responde a los eventos que se 
     pueden originar en la llamada del modulo principal
     """
     if evento[0] == 'OK':
-<<<<<<< HEAD
-        with open ('dificultad.json', 'w') as archivo_config:
-            json.dump(evento[0], archivo_config)
-=======
          cargarConfig(evento[1][1])
     if evento[0] == 'ok':
          with open ('perfil_actual.json', 'w') as archivo:
               json.dump(evento[1][0], archivo)
->>>>>>> mejora pantalla inicio
     if evento[0] == "Jugar":
          ventana.Hide()
          comenzar()
