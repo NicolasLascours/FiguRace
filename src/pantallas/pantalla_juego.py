@@ -1,9 +1,11 @@
 import PySimpleGUI as sg
 from .layouts.layout_juego import layouts
-    
+
+
 # aca va para poder abrir el archivo de los dataset para el juego
 def archivo_dataset():
     pass
+
 
 def comenzar():
     """
@@ -20,4 +22,4 @@ def comenzar():
     sg.popup_ok('La cantidad de puntos obtenidos es: ', puntaje)
     ventana.close()
 
-#abrir_archivo()
+# abrir_archivo()

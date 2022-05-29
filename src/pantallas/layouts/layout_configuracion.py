@@ -1,5 +1,7 @@
 import PySimpleGUI as sg
-#layout del programa
+# layout del programa
+
+
 def layout():
     """funcion que tiene el diseño de 
     la pantalla de configuraciones 
@@ -15,7 +17,8 @@ def layout():
            [sg.Text('Puntaje a restar por respuesta incorrecta')],
            [sg.Combo(['10', '30', '50', '60', '80', '100'], key='Puntaje Restado')],
            [sg.Text('Cantidad de caracteristicas a mostrar en pantalla')],
-           [sg.Combo(['1', '3', '5'], key='Caracteristicas')], # verificar datos del dataset, o sea si son 5 columnas en el data set se puede hacer hasta 5 
+           [sg.Combo(['1', '3', '5'], key='Caracteristicas')],  # verificar datos del dataset, o sea si son 5 columnas
+                                                                # en el data set se puede hacer hasta 5
            [sg.Submit(), sg.Text('    '), sg.Button('Volver')]
            ]
     return layout
