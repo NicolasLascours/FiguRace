@@ -6,7 +6,6 @@ from ..pantalla_juego import comenzar
 from ..pantalla_puntajes import ventana_puntajes
 from ..pantalla_perfiles import ventana_perfiles
 
-
 def elegirperfil():
      """
      Funcion que genera una lista con los nick de 
@@ -20,13 +19,11 @@ def elegirperfil():
                 l.append(linea['nick']) 
      return l  
 
-
 def cargarConfig(dif):
      """
      Funcion que carga las configuraciones para
      cada dificultad
      """
-     print(dif)
      with open('config.json', 'r') as archivo:
            dicc = json.load(archivo)
      with open('config.json', 'w') as archivo: # configuraciones por defecto para cada dificultad
@@ -52,6 +49,8 @@ def eventos(evento, ventana):
     """
     if evento[0] == 'OK':
          cargarConfig(evento[1][1])
+         with open('dificultad.json', 'w') as archivo:
+              json.dump(evento[1][1], archivo)
     if evento[0] == 'ok':
          with open('perfil_actual.json', 'w') as archivo:
               json.dump(evento[1][0], archivo)
