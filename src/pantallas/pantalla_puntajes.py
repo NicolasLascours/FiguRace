@@ -5,6 +5,7 @@ import PySimpleGUI as sg
 
 
 def ventana_puntajes():
+    """"Crea y ejecuta la pantalla de puntajes"""
     # creo ventana puntajes
     sg.theme('LightBlue4')
     window = sg.Window("Puntajes", layout_puntajes(), margins=(200, 150))
