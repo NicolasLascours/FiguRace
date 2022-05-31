@@ -5,6 +5,7 @@ import PySimpleGUI as sg
 
 
 def ventana_perfiles():
+    """"Crea y ejecuta la pantalla de perfiles"""
     # creo ventana perfiles
     sg.theme('LightBlue4')
     window = sg.Window("Perfiles", layout_perfiles(), margins=(200, 150))

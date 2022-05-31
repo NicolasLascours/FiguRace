@@ -39,6 +39,9 @@ def handler_perfiles(event):
             # si existe el nick, aviso que se vuelva a ingresar otro
             if encontre:
                 sg.popup_ok("El nick ya existe ingrese otro")
+            # si un campo se dejo vacio, aviso que debe completarse
+            elif values[0] == "" or values[1] == "" or values[2] == "":
+                sg.popup_ok("Debe completar todos los campos")
             # si el nick no existe entonces creo el nuevo perfil
             else:
                 # agrego los datos nuevos
@@ -73,29 +76,33 @@ def handler_perfiles(event):
 
             if event == "Cancel" or event == sg.WIN_CLOSED:
                 break
-            # abro el json y me quedo con los datos
-            with open('perfiles.json', 'r') as archivo:
-                datos = json.load(archivo)
             # guardo los datos ingresados
             nombre = values[0]
             edad = values[1]
             genero = values[2]
-            # busco el nick en los datos del json
-            encontre = False
-            i = 0
-            while i < len(datos) and not encontre:
-                if datos[i]["nick"] == nombre:
-                    encontre = True
-                    break
-                i += 1
-            # cuando lo encuentro modifico los datos viejos con los nuevos
-            if encontre:
-                datos[i]["edad"] = edad
-                datos[i]["genero"] = genero
-                # guardo los datos nuevos en el json
-                with open('perfiles.json', 'w') as archivo:
-                    json.dump(datos, archivo)
-            sg.popup_ok("El perfil se modifico con exito")
-            break
+            # si un campo se dejo vacio, aviso que debe completarse
+            if nombre == "" or edad == "" or genero == "":
+                sg.popup_ok("Debe completar todos los campos")
+            else:
+                # abro el json y me quedo con los datos
+                with open('perfiles.json', 'r') as archivo:
+                    datos = json.load(archivo)
+                # busco el nick en los datos del json
+                encontre = False
+                i = 0
+                while i < len(datos) and not encontre:
+                    if datos[i]["nick"] == nombre:
+                        encontre = True
+                        break
+                    i += 1
+                # cuando lo encuentro modifico los datos viejos con los nuevos
+                if encontre:
+                    datos[i]["edad"] = edad
+                    datos[i]["genero"] = genero
+                    # guardo los datos nuevos en el json
+                    with open('perfiles.json', 'w') as archivo:
+                        json.dump(datos, archivo)
+                sg.popup_ok("El perfil se modifico con exito")
+                break
         # cierro la ventana
         window.close()
