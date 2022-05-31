@@ -2,10 +2,6 @@ import PySimpleGUI as sg
 from .layouts.layout_juego import layouts
 from .handlers.handler_juego import eventos
 
-# aca va para poder abrir el archivo de los dataset para el juego
-def archivo_dataset():
-    pass
-
 def comenzar():
     """
     Funcion que realiza la ejecucion de la pantalla del juego
