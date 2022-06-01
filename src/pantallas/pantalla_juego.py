@@ -3,7 +3,6 @@ import os
 from .layouts.layout_juego import layouts
 from .handlers.handler_juego import eventos
 from .handlers.handler_juego import abrir_configuracion
-from .handlers.handler_juego import abrir_dificultad
 
 def comenzar():
     """
