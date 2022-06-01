@@ -1,11 +1,12 @@
 import PySimpleGUI as sg
 import json
 import os
-import datetime
+import time
 from ..handlers.handler_juego import abrir_configuracion
 from ..handlers.handler_juego import abrir_volcanes
 from ..handlers.handler_juego import abrir_fifa
 from ..handlers.handler_juego import abrir_lagos
+from ..handlers.handler_juego import convert
 
 # layout de la pantalla del juego
 def layouts ():
@@ -15,6 +16,7 @@ def layouts ():
     """
     config = abrir_configuracion()
     header_volcan, data_volcan = abrir_volcanes()
+    mins, seg = divmod(int(config['Tiempo']), 60)
     if config['Caracteristicas'] == "1":
         layout = [
             [sg.Text('Volcanes!!'), sg.Text(' '*74), sg.Text('Dificultad')],
@@ -22,7 +24,7 @@ def layouts ():
             [sg.Text('')],
             [sg.Text('Caracteristicas'), sg.Text('Ronda actual 1'),
              sg.Text('Cantidad de rondas {}'.format(config['Rondas'])),
-             sg.Text('Tiempo: ')],
+             sg.Text('Tiempo: {}'.format(convert(int(config['Tiempo']))))],
             [sg.Text('')],
             [sg.Text('')],
             [sg.Text('')],
@@ -45,7 +47,7 @@ def layouts ():
             [sg.Text('')],
             [sg.Text('Caracteristicas'), sg.Text('Ronda actual 1'),
              sg.Text('Cantidad de rondas {}'.format(config['Rondas'])),
-             sg.Text('Tiempo: ')],
+             sg.Text(('Tiempo: {}'.format(convert(int(config['Tiempo'])))))],
             [sg.Text('')],
             [sg.Text('Año: {}'.format(data_volcan[0][0]))],
             [sg.Text('')],
@@ -68,7 +70,7 @@ def layouts ():
             [sg.Text('')],
             [sg.Text('Caracteristicas'), sg.Text('Ronda actual 1'),
              sg.Text('Cantidad de rondas {}'.format(config['Rondas'])),
-             sg.Text('Tiempo: ')],
+             sg.Text(('Tiempo: {}'.format(convert(int(config['Tiempo'])))))],
             [sg.Text('')],
             [sg.Text('Año: {}'.format(data_volcan[0][0]))],
             [sg.Text('Bandera terremoto: {}'.format(data_volcan[0][4]))],
