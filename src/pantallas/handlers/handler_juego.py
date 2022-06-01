@@ -3,6 +3,7 @@ import json
 from roots import ROOT_VOLCANS, ROOT_LAGOS, ROOT_FIFA
 import csv
 
+
 def abrir_volcanes():
     """
     Abre el datasets de volcanes y retorna el encabezado
@@ -13,6 +14,7 @@ def abrir_volcanes():
         header, data = next(csvreader), list(csvreader)
     return header, data
 
+
 def abrir_lagos():
     """
     Abre el datasets de lagos y retorna el encabezado
@@ -22,6 +24,7 @@ def abrir_lagos():
         csvreader = csv.reader(dataset, delimiter=',')
         header, data = next(csvreader), list(csvreader)
     return header, data
+
 
 def abrir_fifa():
     """
@@ -34,7 +37,7 @@ def abrir_fifa():
     return header, data
 
 
-def abrir_configuracion ():
+def abrir_configuracion():
     """
     funcion para poder abrir el archivo json
     de las configuraciones del juego
@@ -45,12 +48,20 @@ def abrir_configuracion ():
     archivo_json.close()
     return datos
 
+
 def convert(seconds):
     seconds = seconds % (24 * 3600)
     seconds %= 3600
     minutes = seconds // 60
     seconds %= 60
     return "%02d:%02d" % (minutes, seconds)
+
+
+def abrir_perfil_actual():
+    archivo_json = open('perfil_actual.json', 'r')
+    datos = json.load(archivo_json)
+    return datos
+
 
 def eventos(evento, ronda_act):
     """

@@ -1,12 +1,13 @@
 import json
 import PySimpleGUI as sg
-from src.pantallas.handlers.handler_juego import abrir_configuracion
 from ..pantalla_configuracion import ventana_configuracion
 from ..pantalla_juego import comenzar
 from ..pantalla_puntajes import ventana_puntajes
 from ..pantalla_perfiles import ventana_perfiles
+from src.pantallas.handlers.handler_juego import abrir_configuracion, abrir_perfil_actual
 
-def elegirperfil():
+
+def elegir_perfil():
      """
      Funcion que genera una lista con los nick de 
      los jugadores para luego en la pantalla puedan
@@ -19,7 +20,7 @@ def elegirperfil():
                 l.append(linea['nick']) 
      return l  
 
-def cargarConfig(dif):
+def cargar_config(dif):
      """
      Funcion que carga las configuraciones para
      cada dificultad
@@ -50,11 +51,13 @@ def eventos(evento, ventana):
     funcion que responde a los eventos que se 
     pueden originar en la llamada del modulo principal
     """
-    if evento[0] == 'OK':
-         cargarConfig(evento[1][1])
-    if evento[0] == 'ok':
+    if evento[0] == '-OK DIFI-':
+         cargar_config(evento[1]['-COMBO DIFICULTAD-'])
+    if evento[0] == '-OK PERF-':     
          with open('perfil_actual.json', 'w') as archivo:
-              json.dump(evento[1][0], archivo)
+              perf = {}
+              perf['nick'] = evento[1]['-COMBO PERFILES-']
+              json.dump(perf, archivo)
     if evento[0] == "Jugar":
          ventana.Hide()
          comenzar()
@@ -62,6 +65,8 @@ def eventos(evento, ventana):
     if evento[0] == "Configuracion":
          ventana.Hide()
          ventana_configuracion()
+         config = abrir_configuracion()
+         ventana['-COMBO DIFICULTAD-'].update(value=config['Dificultad'])
          ventana.UnHide()
     if evento[0] == "Puntajes":
          ventana.Hide()
@@ -70,4 +75,7 @@ def eventos(evento, ventana):
     if evento[0] == "Perfiles":
          ventana.Hide()
          ventana_perfiles()
+         perfil = abrir_perfil_actual()
+         ventana['-COMBO PERFILES-'].update(
+              value=perfil['nick'], values=elegir_perfil())
          ventana.UnHide()
