@@ -16,7 +16,6 @@ def layouts ():
     """
     config = abrir_configuracion()
     header_volcan, data_volcan = abrir_volcanes()
-    mins, seg = divmod(int(config['Tiempo']), 60)
     if config['Caracteristicas'] == "1":
         layout = [
             [sg.Text('Volcanes!!'), sg.Text(' '*74), sg.Text('Dificultad')],

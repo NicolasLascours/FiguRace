@@ -57,12 +57,6 @@ def convert(seconds):
     return "%02d:%02d" % (minutes, seconds)
 
 
-def abrir_perfil_actual():
-    archivo_json = open('perfil_actual.json', 'r')
-    datos = json.load(archivo_json)
-    return datos
-
-
 def eventos(evento, ronda_act):
     """
     Funcion que controla la logica y

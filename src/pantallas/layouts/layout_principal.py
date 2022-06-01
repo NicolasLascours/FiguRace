@@ -1,5 +1,5 @@
 import PySimpleGUI as sg
-from src.pantallas.handlers.handler_juego import abrir_configuracion, abrir_perfil_actual
+from src.pantallas.handlers.handler_juego import abrir_configuracion
 from ..handlers.handler_principal import elegir_perfil
 # color seleccionado para la ventana
 
@@ -13,16 +13,16 @@ def layouts_prin():
     sg.theme("LightGreen10")
     # diseño
     config = abrir_configuracion()
-    perfil = abrir_perfil_actual()
     layout = [
         [sg.Button("Configuracion", size=(10, 2)), sg.Text(' '*47),
         sg.Text('Ingrese un perfil para jugar')],
-        [sg.Text(' '*84),  sg.Combo(elegir_perfil(), default_value=perfil['nick'],
-         readonly=True, key='-COMBO PERFILES-'), sg.Submit('OK', key='-OK PERF-')],
+        [sg.Text(' '*78),  sg.Combo(elegir_perfil(), readonly=True, key='-COMBO PERFILES-',
+        size=(12,1)), sg.Submit('OK', key='-OK PERF-')],
         [sg.Column([[sg.Text("FIGURACE")]], justification='center')],
         [sg.Column([[sg.Button("Jugar", size=(5, 2))]], justification='center')],
         [sg.Text(' '*77), sg.Text('Elija la dificultad')],
-        [sg.Text(' '*78), sg.Combo(['Facil', 'Normal', 'Dificil'], default_value=config['Dificultad'],
+        [sg.Text(' '*78), sg.Combo(['Facil', 'Normal', 'Dificil'],
+         default_value=config['Dificultad'],
          readonly=True, key='-COMBO DIFICULTAD-',size=(12,1)), sg.Button('OK', key='-OK DIFI-')],
         [sg.Text(' '*86)],
         [sg.Button("Perfiles", size=(10, 2)), sg.Text(' '*19),
