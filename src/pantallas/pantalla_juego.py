@@ -2,7 +2,6 @@ import PySimpleGUI as sg
 import os
 from .layouts.layout_juego import layouts
 from .handlers.handler_juego import eventos
-from .handlers.handler_juego import abrir_configuracion
 
 def comenzar():
     """
@@ -13,6 +12,7 @@ def comenzar():
     try:
         ruta_archivo = os.path.join('config.json')
         archivo_json = open(ruta_archivo, 'r')
+        archivo_json.close()
     except FileNotFoundError:
         sg.popup_error('Parece que no pusiste las configuraciones... Intentalo de nuevo')
     # ventana del juego
