@@ -50,12 +50,13 @@ def ventana_configuracion():  # arreglar el false y el for
     ventana = sg.Window('Configuracion', lista, size=(350, 300))  # ventana variable que tiene los layout y el tamaño de pantalla
     # ejecucion del while
     while True:
-      ventana.refresh()
-      evento, values = ventana.read()
-      if evento == sg.WIN_CLOSED or evento == 'Volver':  # cuando se pueda hacer que cuando aprete volver vuelva a la pantalla inicial del juego
-          break
-      b = verificar_json(values)
-      evento_config(b, evento, values)
+        ventana.refresh()
+        evento, values = ventana.read()
+        if evento == sg.WIN_CLOSED or evento == 'Volver':  # cuando se pueda hacer que cuando aprete volver vuelva a la pantalla inicial del juego
+            break
+        values['Dificultad'] = 'Personalizada'
+        b = verificar_json(values)
+        evento_config(b, evento, values)
     ventana.close()
 
 # puede pasar que el usuario no ingrese una configuracion, por lo tanto,

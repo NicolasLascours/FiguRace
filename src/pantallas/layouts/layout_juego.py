@@ -3,7 +3,6 @@ import json
 import os
 import datetime
 from ..handlers.handler_juego import abrir_configuracion
-from ..handlers.handler_juego import abrir_dificultad
 
 # layout de la pantalla del juego
 def layouts ():
@@ -12,13 +11,14 @@ def layouts ():
     pantalla del juego 
     """
     config = abrir_configuracion()
-    dif = abrir_dificultad()
     if config['Caracteristicas'] == "1":
         layout = [
-            [sg.Text('Volcanes!!'), sg.Text('                                                                          '), sg.Text('Dificultad')],
-            [sg.Text('                                                                                              '), sg.Text(dif)],
+            [sg.Text('Volcanes!!'), sg.Text(' '*74), sg.Text('Dificultad')],
+            [sg.Text(' '*93), sg.Text(config['Dificultad'])],
             [sg.Text('')],
-            [sg.Text('Caracteristicas'), sg.Text('Ronda actual 1'),sg.Text('Cantidad de rondas {}'.format(config['Rondas']))],
+            [sg.Text('Caracteristicas'), sg.Text('Ronda actual 1'),
+             sg.Text('Cantidad de rondas {}'.format(config['Rondas'])),
+             sg.Text('Tiempo: ')],
             [sg.Text('')],
             [sg.Text('')],
             [sg.Text('')],
@@ -31,14 +31,17 @@ def layouts ():
             [sg.Button('Opcion 3')],
             [sg.Button('Opcion 4')],
             [sg.Button('Opcion 5')],
-            [sg.Button("Pasar"), sg.Button('OK') ,sg.Text('                                                             '), sg.Button('Abandonar el juego')],
+            [sg.Button("Pasar"), sg.Button('OK') ,sg.Text(' '*61),
+             sg.Button('Abandonar el juego')],
         ] 
     if config['Caracteristicas'] == "3":
         layout = [
-            [sg.Text('Volcanes!!'), sg.Text('                                                                          '), sg.Text('Dificultad')],
-            [sg.Text('                                                                                              '), sg.Text(dif)],
+            [sg.Text('Volcanes!!'), sg.Text(' '*74), sg.Text('Dificultad')],
+            [sg.Text(' '*93), sg.Text(config['Dificultad'])],
             [sg.Text('')],
-            [sg.Text('Caracteristicas'), sg.Text('Ronda actual 1'),sg.Text('Cantidad de rondas {}'.format(config['Rondas']), sg.Text('Tiempo: '))],
+            [sg.Text('Caracteristicas'), sg.Text('Ronda actual 1'),
+             sg.Text('Cantidad de rondas {}'.format(config['Rondas'])),
+             sg.Text('Tiempo: ')],
             [sg.Text('')],
             [sg.Text('Pais: ')],
             [sg.Text('')],
@@ -51,14 +54,17 @@ def layouts ():
             [sg.Button('Opcion 3')],
             [sg.Button('Opcion 4')],
             [sg.Button('Opcion 5')],
-            [sg.Button("Pasar"), sg.Button('OK') ,sg.Text('                                                             '), sg.Button('Abandonar el juego')],
+            [sg.Button("Pasar"), sg.Button('OK') ,sg.Text(' '*61),
+             sg.Button('Abandonar el juego')],
         ]
     if config['Caracteristicas'] == "5":
         layout = [
-            [sg.Text('Volcanes!!'), sg.Text('                                                                          '), sg.Text('Dificultad')],
-            [sg.Text('                                                                                              '), sg.Text(dif)],
+            [sg.Text('Volcanes!!'), sg.Text(' '*74), sg.Text('Dificultad')],
+            [sg.Text(' '*93), sg.Text(config['Dificultad'])],
             [sg.Text('')],
-            [sg.Text('Caracteristicas'), sg.Text('Ronda actual 1'),sg.Text('Cantidad de rondas {}'.format(config['Rondas']))],
+            [sg.Text('Caracteristicas'), sg.Text('Ronda actual 1'),
+             sg.Text('Cantidad de rondas {}'.format(config['Rondas'])),
+             sg.Text('Tiempo: ')],
             [sg.Text('')],
             [sg.Text('Pais: ')],
             [sg.Text('Tipo: ')],
@@ -71,6 +77,7 @@ def layouts ():
             [sg.Button('Opcion 3')],
             [sg.Button('Opcion 4')],
             [sg.Button('Opcion 5')],
-            [sg.Button("Pasar"), sg.Button('OK') ,sg.Text('                                                             '), sg.Button('Abandonar el juego')],
+            [sg.Button("Pasar"), sg.Button('OK') ,sg.Text(' '*61),
+             sg.Button('Abandonar el juego')],
         ]
     return layout

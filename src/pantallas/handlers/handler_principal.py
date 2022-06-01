@@ -25,20 +25,23 @@ def cargarConfig(dif):
      cada dificultad
      """
      with open('config.json', 'r') as archivo:
-           dicc = json.load(archivo)
+          dicc = json.load(archivo)
      with open('config.json', 'w') as archivo: # configuraciones por defecto para cada dificultad
           if dif == 'Facil':
                dicc['Puntaje Sumado'] = '100'
                dicc['Puntaje Restado'] = '10'
                dicc['Caracteristicas'] = '5'
+               dicc['Dificultad'] = "Facil"
           if dif == 'Normal':
                dicc['Puntaje Sumado'] = '50'
                dicc['Puntaje Restado'] = '20'
                dicc['Caracteristicas'] = '3'
+               dicc['Dificultad'] = "Normal"
           if dif == 'Dificil':
                dicc['Puntaje Sumado'] = '10'
                dicc['Puntaje Restado'] = '50'
                dicc['Caracteristicas'] = '1'
+               dicc['Dificultad'] = "Dificil"
           json.dump(dicc, archivo)
           sg.popup_ok('Se han actualizado las configuraciones para la dificultad ', dif)
 
@@ -49,8 +52,6 @@ def eventos(evento, ventana):
     """
     if evento[0] == 'OK':
          cargarConfig(evento[1][1])
-         with open('dificultad.json', 'w') as archivo:
-              json.dump(evento[1][1], archivo)
     if evento[0] == 'ok':
          with open('perfil_actual.json', 'w') as archivo:
               json.dump(evento[1][0], archivo)
