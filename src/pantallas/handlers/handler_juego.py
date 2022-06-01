@@ -45,7 +45,18 @@ def abrir_configuracion ():
     archivo_json.close()
     return datos
 
+def convert(seconds):
+    seconds = seconds % (24 * 3600)
+    seconds %= 3600
+    minutes = seconds // 60
+    seconds %= 60
+    return "%02d:%02d" % (minutes, seconds)
+
 def eventos(evento, ronda_act):
+    """
+    Funcion que controla la logica y
+    eventos que ocurren en el juego
+    """
     if evento == 'Pasar':
         ronda_act += 1
     return ronda_act
