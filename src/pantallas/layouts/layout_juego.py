@@ -3,6 +3,9 @@ import json
 import os
 import datetime
 from ..handlers.handler_juego import abrir_configuracion
+from ..handlers.handler_juego import abrir_volcanes
+from ..handlers.handler_juego import abrir_fifa
+from ..handlers.handler_juego import abrir_lagos
 
 # layout de la pantalla del juego
 def layouts ():
