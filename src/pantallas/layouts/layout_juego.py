@@ -9,7 +9,7 @@ from ..handlers.handler_juego import abrir_lagos
 from ..handlers.handler_juego import convert
 
 # layout de la pantalla del juego
-def layouts ():
+def layouts():
     """
     funcion que define el diseño de la 
     pantalla del juego 
@@ -24,10 +24,10 @@ def layouts ():
             [sg.Text('Caracteristicas'), sg.Text('Ronda actual: 1'),
              sg.Text('Cantidad de rondas {}'.format(config['Rondas'])),
              sg.Text('Tiempo: {}'.format(convert(int(config['Tiempo']))))],
-            [sg.Text(' '*45),sg.Text('Puntaje: 0')],
+            [sg.Text(' '*45), sg.Text('Puntaje: 0')],
             [sg.Text('')],
             [sg.Text('')],
-            [sg.Text('Pais:{}'.format(data_volcan[0][0]) )],
+            [sg.Text('Pais:{}'.format(data_volcan[0][0]))],
             [sg.Text('')],
             [sg.Text('')],
             [sg.Text('')],
@@ -36,7 +36,7 @@ def layouts ():
             [sg.Button('{}'.format(data_volcan[0][5]))],
             [sg.Button('{}'.format(data_volcan[1][5]))],
             [sg.Button('{}'.format(data_volcan[4][5]))],
-            [sg.Button("Pasar"), sg.Button('OK') ,sg.Text(' '*61),
+            [sg.Button("Pasar"), sg.Button('OK'), sg.Text(' '*61),
              sg.Button('Abandonar el juego')],
         ] 
     if config['Caracteristicas'] == "3":
@@ -47,7 +47,7 @@ def layouts ():
             [sg.Text('Caracteristicas'), sg.Text('Ronda actual: 1'),
              sg.Text('Cantidad de rondas {}'.format(config['Rondas'])),
              sg.Text(('Tiempo: {}'.format(convert(int(config['Tiempo'])))))],
-            [sg.Text(' '*45),sg.Text('Puntaje: 0')],
+            [sg.Text(' '*45), sg.Text('Puntaje: 0')],
             [sg.Text('Año: {}'.format(data_volcan[0][0]))],
             [sg.Text('')],
             [sg.Text('Indice de explosividad volcanica: {}'.format(data_volcan[0][1]))],
@@ -59,7 +59,7 @@ def layouts ():
             [sg.Button('{}'.format(data_volcan[0][5]))],
             [sg.Button('{}'.format(data_volcan[1][5]))],
             [sg.Button('{}'.format(data_volcan[4][5]))],
-            [sg.Button("Pasar"), sg.Button('OK') ,sg.Text(' '*61),
+            [sg.Button("Pasar"), sg.Button('OK'), sg.Text(' '*61),
              sg.Button('Abandonar el juego')],
         ]
     if config['Caracteristicas'] == "5":
@@ -70,7 +70,7 @@ def layouts ():
             [sg.Text('Caracteristicas'), sg.Text('Ronda actual: 1'),
              sg.Text('Cantidad de rondas {}'.format(config['Rondas'])),
              sg.Text(('Tiempo: {}'.format(convert(int(config['Tiempo'])))))],
-            [sg.Text(' '*45),sg.Text('Puntaje: 0')],
+            [sg.Text(' '*45), sg.Text('Puntaje: 0')],
             [sg.Text('Año: {}'.format(data_volcan[0][0]))],
             [sg.Text('Bandera terremoto: {}'.format(data_volcan[0][4]))],
             [sg.Text('Tipo de volcan: {}'.format(data_volcan[0][2]))],
@@ -82,7 +82,7 @@ def layouts ():
             [sg.Button('{}'.format(data_volcan[0][5]))],
             [sg.Button('{}'.format(data_volcan[1][5]))],
             [sg.Button('{}'.format(data_volcan[4][5]))],
-            [sg.Button("Pasar"), sg.Button('OK') ,sg.Text(' '*61),
+            [sg.Button("Pasar"), sg.Button('OK'), sg.Text(' '*61),
              sg.Button('Abandonar el juego')],
         ]
     return layout
