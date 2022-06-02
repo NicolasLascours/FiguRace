@@ -6,6 +6,7 @@ from ..pantalla_puntajes import ventana_puntajes
 from ..pantalla_perfiles import ventana_perfiles
 from src.pantallas.handlers.handler_juego import abrir_configuracion
 
+
 def elegir_perfil():
     """
     Funcion que genera una lista con los nick de 
@@ -16,8 +17,9 @@ def elegir_perfil():
     with open('perfiles.json', 'r') as archivo:
         datos = json.load(archivo)
         for linea in datos:
-            l.append(linea['nick']) 
-    return l  
+            l.append(linea['nick'])
+    return l
+
 
 def cargar_config(dif):
     """
@@ -26,7 +28,7 @@ def cargar_config(dif):
     """
     with open('config.json', 'r') as archivo:
         dicc = json.load(archivo)
-    with open('config.json', 'w') as archivo: # configuraciones por defecto para cada dificultad
+    with open('config.json', 'w') as archivo:  # configuraciones por defecto para cada dificultad
         if dif == 'Facil':
             dicc['Puntaje Sumado'] = '100'
             dicc['Puntaje Restado'] = '10'
@@ -44,6 +46,7 @@ def cargar_config(dif):
             dicc['Dificultad'] = "Dificil"
         json.dump(dicc, archivo)
         sg.popup_ok('Se han actualizado las configuraciones para la dificultad ', dif)
+
 
 def eventos(evento, ventana, perfil_actual):
     """
