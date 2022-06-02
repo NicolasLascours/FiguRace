@@ -10,6 +10,8 @@ from ..handlers.handler_juego import convert
 
 
 # layout de la pantalla del juego
+
+
 def layouts():
     """
     funcion que define el diseño de la
