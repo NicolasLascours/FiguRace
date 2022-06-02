@@ -1,11 +1,4 @@
-# README
-Este es el readme del proyecto.
-- Incluye el nombre de los integrantes
-- La forma de ejecutar cada aplicación
-- El sitio donde obtuvo los dataset
-- Un archivo con los requerimientos de librerías que utiliza 
-- Consideraciones especial para su ejecución.
-
+ # README
 
 ### Integrantes:
 - FUENTE Lautaro 
@@ -13,10 +6,18 @@ Este es el readme del proyecto.
 - MATURO Agustín
 - VISCARDI ROBLES Franco
 
-### Consideracion para su uso:
+### Consideración para su uso:
 Para una correcta ejecución del proyecto, es necesario instalar las librerías utilizadas en este.  
 Estando ubicado en el directorio del proyecto se debe colocar: `pip install -r requirements.txt`  
 Una vez finalice la instalación, puede comenzar a utilizarlo.
+
+### Ejecución del programa
+1. Asegúrese de tener las librerías necesarias para su ejecución (en Consideración para su uso)  
+2. Ejecute `figurace.py`  
+3. Una vez abierto el programa, en caso de necesitarlo, debe crear un perfil en la opción `Perfiles -> Crear Perfil`. Luego de crearlo, vuelva al menú.  
+4. Cuando ya tenga un perfil para usar, debe seleccionarlo en la casilla del menú y después presionar `OK`  
+5. En el menú puede seleccionar una dificultad o también puede ingresar a `Configuracion` para realizar una configuración personalizada. Por defecto queda guardada la última dificultad usada.  
+6. Una vez tenga el perfil seleccionado y la dificultad deseada, puede presionar el botón de jugar
 
 ### Sitios de los datasets:
 -  Lagos de Argentina: https://drive.google.com/file/d/1PzfCgiAhPAq8Cztx9psk3puxDPHsjnqJ/view?usp=sharing
