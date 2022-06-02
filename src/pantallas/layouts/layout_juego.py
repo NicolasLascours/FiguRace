@@ -8,11 +8,12 @@ from ..handlers.handler_juego import abrir_fifa
 from ..handlers.handler_juego import abrir_lagos
 from ..handlers.handler_juego import convert
 
+
 # layout de la pantalla del juego
 def layouts():
     """
-    funcion que define el diseño de la 
-    pantalla del juego 
+    funcion que define el diseño de la
+    pantalla del juego
     """
     config = abrir_configuracion()
     header_volcan, data_volcan = abrir_volcanes()
@@ -38,7 +39,7 @@ def layouts():
             [sg.Button('{}'.format(data_volcan[4][5]))],
             [sg.Button("Pasar"), sg.Button('OK'), sg.Text(' '*61),
              sg.Button('Abandonar el juego')],
-        ] 
+        ]
     if config['Caracteristicas'] == "3":
         layout = [
             [sg.Text('Volcanes!!'), sg.Text(' '*74), sg.Text('Dificultad')],
