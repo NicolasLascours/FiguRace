@@ -3,15 +3,26 @@ import json
 import PySimpleGUI as sg
 from roots import ROOT_PERFILES
 
+
+def datos_de_perfiles():
+    with open(ROOT_PERFILES, 'r') as archivo:
+        datos = json.load(archivo)
+    return datos
+
+
 def handler_perfiles(event):
     """creo el manejador para los eventos que ocurran en la pantalla perfiles"""
+    # guardo los datos del json en datos
+    datos = datos_de_perfiles()
+    # rango de edades que uso para el layout
+    edades = list(range(1, 111))
 
     if event == 'Crear nuevo perfil':
         # creo el layout
         layout = [
             [sg.Text('Ingresá nick'), sg.InputText()],
-            [sg.Text('Ingresá edad'), sg.InputText()],
-            [sg.Text('Ingresá genero'), sg.InputText()],
+            [sg.Text('Ingresá edad'), sg.Combo(edades, readonly=True)],
+            [sg.Text('Ingresá genero'), sg.Combo(['Masculino', 'Femenino', 'Otro'], readonly=True)],
             [sg.Button('Ok'), sg.Button('Cancel')]
         ]
         # creo la ventana
@@ -25,9 +36,6 @@ def handler_perfiles(event):
                 break
             # me guardo los datos ingresados
             dato = {"nick": values[0], "edad": values[1], "genero": values[2]}
-            # abro el json y me quedo con los datos
-            with open(ROOT_PERFILES, 'r') as archivo:
-                datos = json.load(archivo)
             # verifico si el nick existe en los datos del json
             encontre = False
             i = 0
@@ -55,16 +63,13 @@ def handler_perfiles(event):
         window.close()
 
     elif event == 'Editar uno existente':
-        # abro json para tomar los datos y crear una lista de nicks
-        with open(ROOT_PERFILES, 'r') as archivo:
-            datos = json.load(archivo)
         # creo la lista con los nick existentes
         lista_nicks = list(map(lambda nicks: nicks['nick'], datos))
         # creo el layout
         layout = [
-            [sg.Text('Elegi nick de perfil a cambiar'), sg.Combo(lista_nicks)],
-            [sg.Text('Ingresá edad'), sg.InputText()],
-            [sg.Text('Ingresá genero'), sg.InputText()],
+            [sg.Text('Elegi nick de perfil a cambiar'), sg.Combo(lista_nicks, readonly=True)],
+            [sg.Text('Ingresá edad'), sg.Combo(edades, readonly=True)],
+            [sg.Text('Ingresá genero'), sg.Combo(['Masculino', 'Femenino', 'Otro'], readonly=True)],
             [sg.Button('Ok'), sg.Button('Cancel')]
         ]
         # creo la ventana
@@ -84,9 +89,6 @@ def handler_perfiles(event):
             if nombre == "" or edad == "" or genero == "":
                 sg.popup_ok("Debe completar todos los campos")
             else:
-                # abro el json y me quedo con los datos
-                with open(ROOT_PERFILES, 'r') as archivo:
-                    datos = json.load(archivo)
                 # busco el nick en los datos del json
                 encontre = False
                 i = 0
