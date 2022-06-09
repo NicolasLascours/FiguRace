@@ -5,7 +5,7 @@ from ..pantalla_juego import comenzar
 from ..pantalla_puntajes import ventana_puntajes
 from ..pantalla_perfiles import ventana_perfiles
 from src.pantallas.handlers.handler_juego import abrir_configuracion
-
+from roots import ROOT_PERFILES, ROOT_CONFIG
 
 def elegir_perfil():
     """
@@ -14,7 +14,7 @@ def elegir_perfil():
     ser elegidos
     """
     l = []
-    with open('perfiles.json', 'r') as archivo:
+    with open(ROOT_PERFILES, 'r') as archivo:
         datos = json.load(archivo)
         for linea in datos:
             l.append(linea['nick'])
@@ -26,9 +26,9 @@ def cargar_config(dif):
     Funcion que carga las configuraciones para
     cada dificultad
     """
-    with open('config.json', 'r') as archivo:
+    with open(ROOT_CONFIG, 'r') as archivo:
         dicc = json.load(archivo)
-    with open('config.json', 'w') as archivo:  # configuraciones por defecto para cada dificultad
+    with open(ROOT_CONFIG, 'w') as archivo:  # configuraciones por defecto para cada dificultad
         if dif == 'Facil':
             dicc['Puntaje Sumado'] = '100'
             dicc['Puntaje Restado'] = '10'

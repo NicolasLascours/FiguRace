@@ -1,7 +1,4 @@
 import PySimpleGUI as sg
-import json
-import os
-import time
 from ..handlers.handler_juego import abrir_configuracion
 from ..handlers.handler_juego import abrir_volcanes
 from ..handlers.handler_juego import abrir_fifa
@@ -30,7 +27,7 @@ def layouts():
             [sg.Text(' '*45), sg.Text('Puntaje: 0')],
             [sg.Text('')],
             [sg.Text('')],
-            [sg.Text('Pais:{}'.format(data_volcan[0][0]))],
+            [sg.Text('Año:{}'.format(data_volcan[0][0]))],
             [sg.Text('')],
             [sg.Text('')],
             [sg.Text('')],

@@ -1,7 +1,7 @@
 # importo modulos
 import json
 import PySimpleGUI as sg
-
+from roots import ROOT_PERFILES
 
 def handler_perfiles(event):
     """creo el manejador para los eventos que ocurran en la pantalla perfiles"""
@@ -26,7 +26,7 @@ def handler_perfiles(event):
             # me guardo los datos ingresados
             dato = {"nick": values[0], "edad": values[1], "genero": values[2]}
             # abro el json y me quedo con los datos
-            with open('perfiles.json', 'r') as archivo:
+            with open(ROOT_PERFILES, 'r') as archivo:
                 datos = json.load(archivo)
             # verifico si el nick existe en los datos del json
             encontre = False
@@ -47,7 +47,7 @@ def handler_perfiles(event):
                 # agrego los datos nuevos
                 datos.append(dato)
                 # abro el json y lo reescribo con la informacion nueva
-                with open('perfiles.json', 'w') as archivo:
+                with open(ROOT_PERFILES, 'w') as archivo:
                     json.dump(datos, archivo)
                 sg.popup_ok("El perfil se creo con exito")
                 break
@@ -56,7 +56,7 @@ def handler_perfiles(event):
 
     elif event == 'Editar uno existente':
         # abro json para tomar los datos y crear una lista de nicks
-        with open('perfiles.json', 'r') as archivo:
+        with open(ROOT_PERFILES, 'r') as archivo:
             datos = json.load(archivo)
         # creo la lista con los nick existentes
         lista_nicks = list(map(lambda nicks: nicks['nick'], datos))
@@ -85,7 +85,7 @@ def handler_perfiles(event):
                 sg.popup_ok("Debe completar todos los campos")
             else:
                 # abro el json y me quedo con los datos
-                with open('perfiles.json', 'r') as archivo:
+                with open(ROOT_PERFILES, 'r') as archivo:
                     datos = json.load(archivo)
                 # busco el nick en los datos del json
                 encontre = False
@@ -100,7 +100,7 @@ def handler_perfiles(event):
                     datos[i]["edad"] = edad
                     datos[i]["genero"] = genero
                     # guardo los datos nuevos en el json
-                    with open('perfiles.json', 'w') as archivo:
+                    with open(ROOT_PERFILES, 'w') as archivo:
                         json.dump(datos, archivo)
                 sg.popup_ok("El perfil se modifico con exito")
                 break

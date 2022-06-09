@@ -1,6 +1,6 @@
 import os
 import json
-from roots import ROOT_VOLCANS, ROOT_LAGOS, ROOT_FIFA
+from roots import ROOT_VOLCANS, ROOT_LAGOS, ROOT_FIFA, ROOT_CONFIG
 import csv
 
 
@@ -39,14 +39,25 @@ def abrir_fifa():
 
 def abrir_configuracion():
     """
-    funcion para poder abrir el archivo json
-    de las configuraciones del juego
+    Abre el archivo json de las configuraciones del juego y retorna los datos.
+    En caso de no encontrar el archivo, lo crea en la direccion correcta y lo
+    carga con una dificultad por defecto.
     """
-    ruta_archivo = os.path.join('config.json')
-    archivo_json = open(ruta_archivo, 'r')
-    datos = json.load(archivo_json)
-    archivo_json.close()
-    return datos
+    try:
+        with open(ROOT_CONFIG, 'r') as archivo_json:
+            datos = json.load(archivo_json)
+            return datos
+    except FileNotFoundError:
+        dif_por_defecto = {"Tiempo": "60",
+                           "Rondas": "4",
+                           "Puntaje Sumado": "50",
+                           "Puntaje Restado": "20",
+                           "Caracteristicas": "3",
+                           "Dificultad": "Normal"}
+        # Si no encuentra el archivo en la ruta, lo crea con valores por defecto
+        with open(ROOT_CONFIG, 'x') as archivo_json:
+            json.dump(dif_por_defecto, archivo_json)
+            return dif_por_defecto    
 
 
 def convert(seconds):

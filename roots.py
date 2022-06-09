@@ -3,6 +3,9 @@ import os.path
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_SRC = os.path.join(ROOT_DIR, 'src')
 
+ROOT_CONFIG = os.path.join(ROOT_DIR, 'config.json')
+ROOT_PERFILES = os.path.join(ROOT_DIR, 'perfiles.json')
+
 ROOT_DATASETS = os.path.join(ROOT_SRC, 'datasets', 'datasets_output')
 ROOT_VOLCANS = os.path.join(ROOT_DATASETS, 'dataset_volcanic.csv')
 ROOT_LAGOS = os.path.join(ROOT_DATASETS, 'dataset_lagos.csv')
