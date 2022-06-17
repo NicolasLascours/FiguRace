@@ -4,7 +4,18 @@ import PySimpleGUI as sg
 from roots import ROOT_PERFILES
 
 
+def obtener_datos_nick(nick, datos):
+    """devuelve la edad y el genero del nick recibido"""
+    i = 0
+    while i < len(datos):
+        if datos[i]["nick"] == nick:
+            break
+        i += 1
+    return datos[i]["edad"], datos[i]["genero"]
+
+
 def datos_de_perfiles():
+    """abre el archivo de perfiles y devuelve los datos que contenga"""
     with open(ROOT_PERFILES, 'r') as archivo:
         datos = json.load(archivo)
     return datos
@@ -67,9 +78,9 @@ def handler_perfiles(event):
         lista_nicks = list(map(lambda nicks: nicks['nick'], datos))
         # creo el layout
         layout = [
-            [sg.Text('Elegi nick de perfil a cambiar'), sg.Combo(lista_nicks, readonly=True)],
-            [sg.Text('Ingresá edad'), sg.Combo(edades, readonly=True)],
-            [sg.Text('Ingresá genero'), sg.Combo(['Masculino', 'Femenino', 'Otro'], readonly=True)],
+            [sg.Text('Elegi nick de perfil a cambiar'), sg.Combo(lista_nicks, readonly=True, enable_events=True)],
+            [sg.Text('Ingresá edad'), sg.Combo(edades, readonly=True, key='EDAD')],
+            [sg.Text('Ingresá genero'), sg.Combo(['Masculino', 'Femenino', 'Otro'], readonly=True, key='GENERO')],
             [sg.Button('Ok'), sg.Button('Cancel')]
         ]
         # creo la ventana
@@ -81,30 +92,36 @@ def handler_perfiles(event):
 
             if event == "Cancel" or event == sg.WIN_CLOSED:
                 break
-            # guardo los datos ingresados
-            nombre = values[0]
-            edad = values[1]
-            genero = values[2]
-            # si un campo se dejo vacio, aviso que debe completarse
-            if nombre == "" or edad == "" or genero == "":
-                sg.popup_ok("Debe completar todos los campos")
-            else:
-                # busco el nick en los datos del json
-                encontre = False
-                i = 0
-                while i < len(datos) and not encontre:
-                    if datos[i]["nick"] == nombre:
-                        encontre = True
-                        break
-                    i += 1
-                # cuando lo encuentro modifico los datos viejos con los nuevos
-                if encontre:
-                    datos[i]["edad"] = edad
-                    datos[i]["genero"] = genero
-                    # guardo los datos nuevos en el json
-                    with open(ROOT_PERFILES, 'w') as archivo:
-                        json.dump(datos, archivo)
-                sg.popup_ok("El perfil se modifico con exito")
-                break
+
+            if event == 'Ok':
+                # si un campo se dejo vacio, aviso que debe completarse
+                if values[0] == "" or values['EDAD'] == "" or values['GENERO'] == "":
+                    sg.popup_ok("Debe completar todos los campos")
+                else:
+                    # guardo los datos ingresados
+                    nombre = values[0]
+                    edad = values['EDAD']
+                    genero = values['GENERO']
+                    # busco el nick en los datos del json
+                    encontre = False
+                    i = 0
+                    while i < len(datos) and not encontre:
+                        if datos[i]["nick"] == nombre:
+                            encontre = True
+                            break
+                        i += 1
+                    # cuando lo encuentro modifico los datos viejos con los nuevos
+                    if encontre:
+                        datos[i]["edad"] = edad
+                        datos[i]["genero"] = genero
+                        # guardo los datos nuevos en el json
+                        with open(ROOT_PERFILES, 'w') as archivo:
+                            json.dump(datos, archivo)
+                    sg.popup_ok("El perfil se modifico con exito")
+                    break
+            if values[0] != "":
+                datos_nick = obtener_datos_nick(values[0], datos)
+                window['EDAD'].update(value=datos_nick[0])
+                window['GENERO'].update(value=datos_nick[1])
         # cierro la ventana
         window.close()
