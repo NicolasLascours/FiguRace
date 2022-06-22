@@ -1,0 +1,6 @@
+Timestamp,ID,Evento,Usuario,Estado,Texto Ingresado,Respuesta,Nivel
+1655853476.5777135,eeb84e28-4635-49f5-b5ef-c0709e59d1c5,inicio_partida,Franco,,,,Dificil
+1655853524.1439772,e44d2043-3c32-4b1f-92fe-332d64f413e9,Intento,Franco,error,Christian Alemán,Lorenzo Reyes,Dificil
+1655853528.4721084,c111334d-3d2c-49d5-a97e-0129b0b38eb3,Intento,Franco,error,Sean Johnson,Beder Caicedo,Dificil
+1655853529.4322805,c08b1e02-635c-424d-b847-a96214a5761d,Intento,Franco,error,Roberto Ramírez,Arnold López,Dificil
+1655853532.0875263,9165a4f0-df17-4a01-b98e-62df20fdefc5,fin,Franco,Cancelada,,,Dificil
