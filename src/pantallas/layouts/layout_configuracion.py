@@ -19,8 +19,12 @@ def layout():
            [sg.Text('Puntaje a restar por respuesta incorrecta')],
            [sg.Combo(['10', '30', '50', '60', '80', '100'],
             key='Puntaje Restado', readonly=True)],
-           [sg.Text('Cantidad de caracteristicas a mostrar en pantalla')],
-           [sg.Combo(['1', '3', '5'], key='Caracteristicas', readonly=True)],
+           [sg.Text('Cantidad de caracteristicas facil')],
+           [sg.Combo(['1', '2' ,'3', '4' ,'5'], key="Facil", readonly=True)],
+           [sg.Text('Cantidad de caracteristicas normal')],
+           [sg.Combo(['1', '2' ,'3', '4' ,'5'], key="Normal", readonly=True)],
+           [sg.Text('Cantidad de caracteristicas dificil')],
+           [sg.Combo(['1', '2' ,'3', '4' ,'5'], key="Dificil", readonly=True)],
            [sg.Submit(), sg.Text('    '), sg.Button('Volver')]
            ]
     return layout
