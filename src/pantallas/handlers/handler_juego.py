@@ -61,9 +61,6 @@ def abrir_configuracion():
             json.dump(dif_por_defecto, archivo_json)
             return dif_por_defecto    
 
-def config_pantalla():
-    pass
-
 def registro_jugadas (evento, ROOT_DIR, perfil_actual, correcta, lista_data, respuesta):
     """
     Funcion que actualiza los eventos que ocurren en
@@ -139,7 +136,7 @@ def eventos(evento, ventana, partida, ROOT_DIR ,correcta, lista_data, perfil_act
             actualizar_partida(ventana, partida)
             partida.decrementar_puntaje()
             ventana["-Puntaje-"].update(f'Puntaje: {partida.puntaje()}')
-            registro_jugadas(evento, ROOT_DIR, perfil_actual, correcta, lista_data)
+            registro_jugadas(evento, ROOT_DIR, perfil_actual, correcta, lista_data, '')
     elif (evento == 'OPCION 0' or evento == 'OPCION 1' or evento == 'OPCION 2' 
             or evento == 'OPCION 3' or evento == 'OPCION 4'): 
             respuesta = int(evento[-1])

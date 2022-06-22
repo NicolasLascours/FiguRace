@@ -4,3 +4,10 @@ Timestamp,ID,Evento,Usuario,Estado,Texto Ingresado,Respuesta,Nivel
 1655853528.4721084,c111334d-3d2c-49d5-a97e-0129b0b38eb3,Intento,Franco,error,Sean Johnson,Beder Caicedo,Dificil
 1655853529.4322805,c08b1e02-635c-424d-b847-a96214a5761d,Intento,Franco,error,Roberto Ramírez,Arnold López,Dificil
 1655853532.0875263,9165a4f0-df17-4a01-b98e-62df20fdefc5,fin,Franco,Cancelada,,,Dificil
+1655929435.2139423,c2cfb1f5-c071-41bf-8dc9-8a437d5e749f,inicio_partida,Franco,,,,Dificil
+1655932026.1536422,ac9019ac-dc80-4b9e-ab7c-db81885ebd72,inicio_partida,Franco,,,,Dificil
+1655932028.5824115,f345b374-bb72-4cf7-b1d1-7423d32f094d,Intento,Franco,error,Shane Long,Dani Plomer,Dificil
+1655932030.1195338,567dcfee-bc6f-4e0f-9774-1472db92138c,Intento,Franco,error,Marcos Ovejero,Cenk Tosun,Dificil
+1655932032.4355145,a91ad9bb-50bf-440e-8a11-87286d1347ce,Intento,Franco,error,Nick Townsend,Frazer Blake-Tracy,Dificil
+1655932034.1428149,5878a845-7e4b-4a76-8bfe-0f36ac94f39b,Intento,Franco,error,Eric Oelschlägel,Lloyd Jones,Dificil
+1655932036.8408632,4e9abf83-4630-430a-a481-70bdbaa96aec,fin,Franco,Cancelada,,,Dificil
