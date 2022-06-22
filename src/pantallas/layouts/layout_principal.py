@@ -1,5 +1,5 @@
 import PySimpleGUI as sg
-from src.pantallas.handlers.handler_juego import abrir_configuracion
+from ..handlers.handler_juego import abrir_configuracion
 from ..handlers.handler_principal import elegir_perfil
 # color seleccionado para la ventana
 
