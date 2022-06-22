@@ -34,11 +34,14 @@ class Partida:
     def ronda_actual(self):
         return self._ronda_actual
 
+    def puntaje(self):
+        return self._puntaje
+
     def incrementar_ronda(self):
         self._ronda_actual += 1
 
     def incrementar_puntaje(self):
-        self._puntaje += self._configuracion['Puntaje Sumado']
+        self._puntaje += int(self._configuracion['Puntaje Sumado'])
 
     def decrementar_puntaje(self):
-        self._puntaje -= self._configuracion['Puntaje Restado']
+        self._puntaje -= int(self._configuracion['Puntaje Restado'])
