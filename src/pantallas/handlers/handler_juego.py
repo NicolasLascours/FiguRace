@@ -67,18 +67,18 @@ def registro_jugadas (evento, ROOT_DIR, perfil_actual, correcta, lista_data, res
     el juego y los guarda en un archico csv
     """
     config = abrir_configuracion()
-    with open (os.path.join(ROOT_DIR, "Registro.csv"), 'a') as reg:
+    with open (os.path.join(ROOT_DIR, "Registro.csv"), 'a', encoding='utf_8') as reg:
         writer = csv.writer(reg)
         if (evento == '__TIMEOUT__'):
-            writer.writerow([time.time(), uuid.uuid4(), 'Intento', perfil_actual["nick"], "timeout", "", correcta[5], config["Dificultad"]])
+            writer.writerow([time.time(), uuid.uuid4(), 'Intento', perfil_actual, "timeout", "", correcta[5], config["Dificultad"]])
         elif (evento == "Correcta"):
-            writer.writerow([time.time(), uuid.uuid4(), 'Intento', perfil_actual["nick"], "ok", lista_data[respuesta][5], correcta[5], config["Dificultad"]])
+            writer.writerow([time.time(), uuid.uuid4(), 'Intento', perfil_actual, "ok", lista_data[respuesta][5], correcta[5], config["Dificultad"]])
         elif (evento == "Incorrecta"):
-            writer.writerow([time.time(), uuid.uuid4(), 'Intento', perfil_actual["nick"], "error", lista_data[respuesta][5], correcta[5], config["Dificultad"]])
+            writer.writerow([time.time(), uuid.uuid4(), 'Intento', perfil_actual, "error", lista_data[respuesta][5], correcta[5], config["Dificultad"]])
         elif (evento == "Abandonar el juego" or evento == sg.WIN_CLOSED):
-            writer.writerow([time.time(), uuid.uuid4(), 'fin', perfil_actual["nick"], "Cancelada", '', '', config["Dificultad"]])
+            writer.writerow([time.time(), uuid.uuid4(), 'fin', perfil_actual, "Cancelada", '', '', config["Dificultad"]])
         else:
-            writer.writerow([time.time(), uuid.uuid4(), 'fin', perfil_actual["nick"], "Finalizada", '', '', config["Dificultad"]])
+            writer.writerow([time.time(), uuid.uuid4(), 'fin', perfil_actual, "Finalizada", '', '', config["Dificultad"]])
 
 
 def convert(seconds):
