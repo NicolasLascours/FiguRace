@@ -11,13 +11,14 @@ def verificar_json(values):
     """
     b = True
     if (values['Tiempo'] == '' or values['Rondas'] == '' or values['Puntaje Sumado'] == '' or
-            values['Puntaje Restado'] == '' or values['Caracteristicas'] == ''):
+            values['Puntaje Restado'] == '' or values["Facil"] == '' or values["Normal"] == '' or
+            values["Dificil"] == ''):
         sg.popup_ok('Problemas!', 'Debe seleccionar un valor en todas las casillas.')
         b = False
     return b
 
 
-def ventana_configuracion():  # arreglar el false y el for
+def ventana_configuracion(dif): 
     """
     funcion que ejecuta la ventana con su
     diseño propio, con todas las funcionalidades
@@ -27,14 +28,13 @@ def ventana_configuracion():  # arreglar el false y el for
     # variable ventana con las caracteristicas de la misma
     lista = layout()
     # ventana variable que tiene los layout y el tamaño de pantalla
-    ventana = sg.Window('Configuracion', lista, size=(350, 300))
+    ventana = sg.Window('Configuracion', lista, size=(450, 400))
     # ejecucion del while
     while True:
-        ventana.refresh()
         evento, values = ventana.read()
         if evento == sg.WIN_CLOSED or evento == 'Volver':
             break
-        values['Dificultad'] = 'Personalizada'
         b = verificar_json(values)
+        values['Dificultad'] = dif
         evento_config(b, evento, values)
     ventana.close()
