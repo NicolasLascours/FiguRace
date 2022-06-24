@@ -36,24 +36,15 @@ def cargar_config(dif):
     """
     with open(ROOT_CONFIG, 'r') as archivo:
         dicc = json.load(archivo)
-    with open(ROOT_CONFIG, 'w') as archivo:  # configuraciones por defecto para cada dificultad
+    with open(ROOT_CONFIG, 'w') as archivo:
         if dif == 'Facil':
-            dicc['Puntaje Sumado'] = '100'
-            dicc['Puntaje Restado'] = '10'
-            dicc['Facil'] = '5'
             dicc['Dificultad'] = "Facil"
         if dif == 'Normal':
-            dicc['Puntaje Sumado'] = '50'
-            dicc['Puntaje Restado'] = '20'
-            dicc['Normal'] = '3'
             dicc['Dificultad'] = "Normal"
         if dif == 'Dificil':
-            dicc['Puntaje Sumado'] = '10'
-            dicc['Puntaje Restado'] = '50'
-            dicc['Dificil'] = '1'
             dicc['Dificultad'] = "Dificil"
         json.dump(dicc, archivo)
-        sg.popup_ok('Se han actualizado las configuraciones para la dificultad ', dif)
+        sg.popup_ok('Se ha actualizado la dificultad a ', dif)
 
 
 def inicializacion_partida (perfil_actual, dif):
@@ -79,7 +70,8 @@ def eventos(evento, ventana):
         if perfil_actual != '':
             ventana.Hide()
             event, data = eleccion_data()
-            while (not data["Eleccion"]):    
+            while (not data["Eleccion"]):
+                sg.popup_ok('Problemas!','Por favor seleccione un dataset.')    
                 event, data = eleccion_data()
             inicializacion_partida(perfil_actual, evento[1]['-COMBO DIFICULTAD-'])
             comenzar(perfil_actual, data)
