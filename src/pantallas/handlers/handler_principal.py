@@ -1,5 +1,8 @@
 import json
 import csv
+import os
+import time
+import uuid
 import PySimpleGUI as sg
 from ..pantalla_configuracion import ventana_configuracion
 from ..pantalla_juego import comenzar
@@ -44,10 +47,23 @@ def cargar_config(dif):
         sg.popup_ok('Se ha actualizado la dificultad a ', dif)
 
 
+def inicializacion_partida (perfil_actual, dif, uui):
+    config = abrir_configuracion()
+    with open (ROOT_PERFILES, 'r') as reg:
+        perfiles = json.load(reg)
+        i = 0
+        while (i < len(perfiles) and (perfiles[i]['nick'] != perfil_actual)):
+            i+=1
+        gen = perfiles[i]['genero']
+    with open (ROOT_REGISTRO, 'a') as reg:
+        writer = csv.writer(reg)
+        writer.writerow([time.time(), uui, config["Rondas"] , gen ,"inicio_partida", perfil_actual, '', '', '', dif])
+
+
 def creacion_csv():
     with open ('registro.csv', 'w') as reg:
         writer = csv.writer(reg)
-        writer.writerow(["Timestamp", "ID", "Evento", "Usuario", "Estado", "Texto Ingresado", "Respuesta", "Nivel"])
+        writer.writerow(["Timestamp", "ID", "Objectos a adivinar", "genero" ,"Evento", "Usuario", "Estado", "Texto Ingresado", "Respuesta", "Nivel"])
 
 def eventos(evento, ventana):
     """
@@ -60,11 +76,13 @@ def eventos(evento, ventana):
         perfil_actual = evento[1]['-COMBO PERFILES-']
         if perfil_actual != '':
             ventana.Hide()
+            uui = uuid.uuid4()
             event, data = eleccion_data()
             while (not data["Eleccion"]):
                 sg.popup_ok('Problemas!','Por favor seleccione un dataset.')    
                 event, data = eleccion_data()
-            comenzar(perfil_actual, data)
+            inicializacion_partida(perfil_actual, evento[1]['-COMBO DIFICULTAD-'], uui)
+            comenzar(perfil_actual, data, uui)
             ventana.UnHide()
         else:
             sg.popup_ok('Antes de jugar debe seleccionar un perfil')
