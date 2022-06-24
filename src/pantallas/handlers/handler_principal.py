@@ -1,7 +1,5 @@
 import json
 import csv
-import time
-import uuid
 import PySimpleGUI as sg
 from ..pantalla_configuracion import ventana_configuracion
 from ..pantalla_juego import comenzar
@@ -47,13 +45,6 @@ def cargar_config(dif):
         sg.popup_ok('Se ha actualizado la dificultad a ', dif)
 
 
-def inicializacion_partida(perfil_actual, dif, uui):
-    config = abrir_configuracion()
-    with open(ROOT_REGISTRO, 'a') as reg:
-        writer = csv.writer(reg)
-        writer.writerow([time.time(), uui, config["Rondas"], "inicio_partida", perfil_actual, '', '', dif])
-
-
 def creacion_csv():
     with open('registro.csv', 'w') as reg:
         writer = csv.writer(reg)
@@ -71,13 +62,11 @@ def eventos(evento, ventana):
         perfil_actual = evento[1]['-COMBO PERFILES-']
         if perfil_actual != '':
             ventana.Hide()
-            uui = uuid.uuid4()
             event, data = eleccion_data()
             while not data["Eleccion"]:
                 sg.popup_ok('Problemas!', 'Por favor seleccione un dataset.')
                 event, data = eleccion_data()
-            inicializacion_partida(perfil_actual, evento[1]['-COMBO DIFICULTAD-'], uui)
-            comenzar(perfil_actual, data, uui)
+            comenzar(perfil_actual, data)
             ventana.UnHide()
         else:
             sg.popup_ok('Antes de jugar debe seleccionar un perfil')
