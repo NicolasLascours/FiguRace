@@ -5,13 +5,10 @@ from roots import ROOT_PERFILES
 
 
 def obtener_datos_nick(nick, datos):
-    """devuelve la edad y el genero del nick recibido"""
-    i = 0
-    while i < len(datos):
-        if datos[i]["nick"] == nick:
-            break
-        i += 1
-    return datos[i]["edad"], datos[i]["genero"]
+    """devuelve la informacion del nick recibido"""
+
+    info = list(filter(lambda x: x["nick"] == nick, datos))
+    return info
 
 
 def datos_de_perfiles():
@@ -48,13 +45,8 @@ def handler_perfiles(event):
             # me guardo los datos ingresados
             dato = {"nick": values[0], "edad": values[1], "genero": values[2]}
             # verifico si el nick existe en los datos del json
-            encontre = False
-            i = 0
-            while i < len(datos) and not encontre:
-                if datos[i]["nick"] == dato["nick"]:
-                    encontre = True
-                    break
-                i += 1
+            encontre = list(filter(lambda x: x["nick"] == dato["nick"], datos))
+            
             # si existe el nick, aviso que se vuelva a ingresar otro
             if encontre:
                 sg.popup_ok("El nick ya existe ingrese otro")
@@ -121,7 +113,7 @@ def handler_perfiles(event):
                     break
             if values[0] != "":
                 datos_nick = obtener_datos_nick(values[0], datos)
-                window['EDAD'].update(value=datos_nick[0])
-                window['GENERO'].update(value=datos_nick[1])
+                window['EDAD'].update(value=datos_nick[0]["edad"])
+                window['GENERO'].update(value=datos_nick[0]["genero"])
         # cierro la ventana
         window.close()
