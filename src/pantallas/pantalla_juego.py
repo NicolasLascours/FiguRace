@@ -11,10 +11,10 @@ import csv
 def guardar_partida(perfil_actual, estado, puntaje, dificultad):
     """Funcion que guarda los datos de una partida en el csv de puntajes"""
     datos = datos_de_perfiles()
-    edad, genero = obtener_datos_nick(perfil_actual, datos)
+    informacion = obtener_datos_nick(perfil_actual, datos)
     with open(ROOT_PUNTAJES, 'a', encoding='utf_8') as archivo:
         writer = csv.writer(archivo)
-        writer.writerow([perfil_actual, genero, estado, puntaje, dificultad])
+        writer.writerow([perfil_actual, informacion[0]["genero"], estado, puntaje, dificultad])
 
 
 def act_completa(ventana, cant, header, datos):
