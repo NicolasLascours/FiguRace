@@ -1,6 +1,7 @@
 import PySimpleGUI as sg
 from src.objects.partida import Partida
 import random
+import uuid
 from .layouts.layout_juego import layouts, config_inicial
 from .handlers.handler_juego import abrir_configuracion, actualizar_tiempo, eventos, registro_jugadas, actualizacion
 from roots import ROOT_PUNTAJES
@@ -29,6 +30,7 @@ def comenzar(perfil_actual, data):
     """
     partida = Partida()
     # ventana del juego
+    uui = uuid.uuid4
     lista_data = []
     lista_carac = ['', '', '', '', '']
     config = abrir_configuracion()
@@ -37,18 +39,18 @@ def comenzar(perfil_actual, data):
     while True and partida.ronda_actual <= partida.cant_rondas:
         evento = ventana.read(timeout=250)
         if evento[0] != "__TIMEOUT__" and (evento[0] != sg.WIN_CLOSED or evento[0] != "Abandonar el juego"):
-            eventos(evento[0], ventana ,partida,correcta, lista_data, perfil_actual)
+            eventos(evento[0], ventana ,partida,correcta, lista_data, perfil_actual, uui)
             correcta, lista_data, lista_carac = act_completa(ventana, cant, header, datos)
         if evento[0] == sg.WIN_CLOSED or evento[0] == "Abandonar el juego":
-            registro_jugadas(evento[0], perfil_actual, correcta, lista_data, '')
+            registro_jugadas(evento[0], perfil_actual, correcta, lista_data, '', uui)
             guardar_partida(perfil_actual,"Cancelada",partida.puntaje(),config["Dificultad"])
             break
         restante = actualizar_tiempo(ventana,partida)
         if evento[0] == "__TIMEOUT__" and restante <= 0:
-           registro_jugadas (evento[0], perfil_actual)
+           registro_jugadas (evento[0], perfil_actual, correcta, lista_data, '', uui)
            correcta, lista_data, lista_carac = act_completa(ventana, cant, header, datos)
     sg.popup_ok('La cantidad de puntos obtenidos es: ', partida.puntaje())
     if evento[0] != "Abandonar el juego" and evento[0] != sg.WIN_CLOSED:
-        registro_jugadas(evento[0], perfil_actual, correcta, lista_data, '')
+        registro_jugadas(evento[0], perfil_actual, correcta, lista_data, '', uui)
         guardar_partida(perfil_actual,"Finalizada",partida.puntaje(),config["Dificultad"])
     ventana.close()
