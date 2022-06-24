@@ -79,6 +79,8 @@ def eventos(evento, ventana):
         if perfil_actual != '':
             ventana.Hide()
             event, data = eleccion_data()
+            while (not data["Eleccion"]):    
+                event, data = eleccion_data()
             inicializacion_partida(perfil_actual, evento[1]['-COMBO DIFICULTAD-'])
             comenzar(perfil_actual, data)
             ventana.UnHide()
