@@ -1,37 +1,135 @@
 Timestamp,ID,Objectos a adivinar,Evento,Usuario,Estado,Respuesta,Nivel
-1656105996.0733535,b9be96eb-a7e9-4539-af82-af1ae2e0f80d,10,inicio_partida,Agustin,,,Facil
-1656105999.1293616,b9be96eb-a7e9-4539-af82-af1ae2e0f80d,10,Intento,Agustin,error,Segundo Portocarrero,Facil
-1656106002.6402245,b9be96eb-a7e9-4539-af82-af1ae2e0f80d,10,Intento,Agustin,error,Jhon Pérez,Facil
-1656106009.6114273,b9be96eb-a7e9-4539-af82-af1ae2e0f80d,10,Intento,Agustin,ok,Folarin Balogun,Facil
-1656106012.868366,b9be96eb-a7e9-4539-af82-af1ae2e0f80d,10,Intento,Agustin,error,Pascal Testroet,Facil
-1656106020.2579088,b9be96eb-a7e9-4539-af82-af1ae2e0f80d,10,Intento,Agustin,error,Veton Berisha,Facil
-1656106023.431376,b9be96eb-a7e9-4539-af82-af1ae2e0f80d,10,Intento,Agustin,error,Andreas Mircea Mihaiu,Facil
-1656106028.2843437,b9be96eb-a7e9-4539-af82-af1ae2e0f80d,10,Intento,Agustin,error,Chase Gasper,Facil
-1656106031.4633253,b9be96eb-a7e9-4539-af82-af1ae2e0f80d,10,Intento,Agustin,error,Tim Rieder,Facil
-1656106034.0293868,b9be96eb-a7e9-4539-af82-af1ae2e0f80d,10,Intento,Agustin,error,Bernard Mensah,Facil
-1656106046.6306603,b9be96eb-a7e9-4539-af82-af1ae2e0f80d,10,Intento,Agustin,error,Emanuel Iñíguez,Facil
-1656106051.153035,b9be96eb-a7e9-4539-af82-af1ae2e0f80d,10,fin,Agustin,finalizada,,Facil
-1656106268.709492,5995d649-7204-4ec9-ab12-5d21d10e313a,10,inicio_partida,Franco,,,Facil
-1656106269.646715,5995d649-7204-4ec9-ab12-5d21d10e313a,10,Intento,Franco,error,Daiki Watari,Facil
-1656106269.8267074,5995d649-7204-4ec9-ab12-5d21d10e313a,10,Intento,Franco,error,Deyan Iliev,Facil
-1656106269.979592,5995d649-7204-4ec9-ab12-5d21d10e313a,10,Intento,Franco,error,Dylan Vente,Facil
-1656106270.1288614,5995d649-7204-4ec9-ab12-5d21d10e313a,10,Intento,Franco,error,Bernardo Medina,Facil
-1656106270.2835934,5995d649-7204-4ec9-ab12-5d21d10e313a,10,Intento,Franco,error,Giacomo Quagliata,Facil
-1656106270.4369888,5995d649-7204-4ec9-ab12-5d21d10e313a,10,Intento,Franco,error,Andrea Luci,Facil
-1656106270.57504,5995d649-7204-4ec9-ab12-5d21d10e313a,10,Intento,Franco,error,Luis Sandoval,Facil
-1656106270.742192,5995d649-7204-4ec9-ab12-5d21d10e313a,10,Intento,Franco,error,Jonathan Silva,Facil
-1656106270.9056294,5995d649-7204-4ec9-ab12-5d21d10e313a,10,Intento,Franco,error,Pedro Trigueira,Facil
-1656106271.053593,5995d649-7204-4ec9-ab12-5d21d10e313a,10,Intento,Franco,error,Rein Smit,Facil
-1656106272.2656367,5995d649-7204-4ec9-ab12-5d21d10e313a,10,fin,Franco,finalizada,,Facil
-1656106407.868931,9f2323ca-ae4d-48c1-a8ab-31cc38bf9020,10,inicio_partida,Agustin,,,Facil
-1656106408.9268365,9f2323ca-ae4d-48c1-a8ab-31cc38bf9020,10,Intento,Agustin,error,Artem Dzyuba,Facil
-1656106409.723295,9f2323ca-ae4d-48c1-a8ab-31cc38bf9020,10,Intento,Agustin,error,Matías Fritzler,Facil
-1656106410.0637357,9f2323ca-ae4d-48c1-a8ab-31cc38bf9020,10,Intento,Agustin,ok,Marlon Barninho,Facil
-1656106410.4045968,9f2323ca-ae4d-48c1-a8ab-31cc38bf9020,10,Intento,Agustin,error,Kim Young Gwon,Facil
-1656106410.7297761,9f2323ca-ae4d-48c1-a8ab-31cc38bf9020,10,Intento,Agustin,error,Matheo Zoch,Facil
-1656106410.967711,9f2323ca-ae4d-48c1-a8ab-31cc38bf9020,10,Intento,Agustin,ok,Conor Washington,Facil
-1656106411.3207755,9f2323ca-ae4d-48c1-a8ab-31cc38bf9020,10,Intento,Agustin,error,Andrea Zaccagno,Facil
-1656106411.5638971,9f2323ca-ae4d-48c1-a8ab-31cc38bf9020,10,Intento,Agustin,error,Mirko Drudi,Facil
-1656106413.098187,9f2323ca-ae4d-48c1-a8ab-31cc38bf9020,10,Intento,Agustin,error,Iván Erquiaga,Facil
-1656106413.399188,9f2323ca-ae4d-48c1-a8ab-31cc38bf9020,10,Intento,Agustin,error,Janik Bachmann,Facil
-1656106414.7230947,9f2323ca-ae4d-48c1-a8ab-31cc38bf9020,10,fin,Agustin,finalizada,,Facil
+1656107368.1602209,e5f8be3e-9abc-454a-91d4-51573c01f7a3,10,inicio_partida,Agustin,,,Facil
+1656107370.287777,e5f8be3e-9abc-454a-91d4-51573c01f7a3,10,Intento,Agustin,error,Scott Flinders,Facil
+1656107373.9249473,e5f8be3e-9abc-454a-91d4-51573c01f7a3,10,Intento,Agustin,ok,Julián Álvarez,Facil
+1656107376.9181917,e5f8be3e-9abc-454a-91d4-51573c01f7a3,10,Intento,Agustin,error,Santiago Londoño,Facil
+1656107380.8377779,e5f8be3e-9abc-454a-91d4-51573c01f7a3,10,Intento,Agustin,ok,Eiichi Katayama,Facil
+1656107386.344514,e5f8be3e-9abc-454a-91d4-51573c01f7a3,10,Intento,Agustin,error,Sebastian Ring,Facil
+1656107391.156454,e5f8be3e-9abc-454a-91d4-51573c01f7a3,10,Intento,Agustin,error,Aaron Lewis,Facil
+1656107394.1948607,e5f8be3e-9abc-454a-91d4-51573c01f7a3,10,Intento,Agustin,ok,Kévin Soni,Facil
+1656107397.323749,e5f8be3e-9abc-454a-91d4-51573c01f7a3,10,Intento,Agustin,error,Issiar Dia,Facil
+1656107400.3785877,e5f8be3e-9abc-454a-91d4-51573c01f7a3,10,Intento,Agustin,ok,Jason Denayer,Facil
+1656107403.8681867,e5f8be3e-9abc-454a-91d4-51573c01f7a3,10,Intento,Agustin,error,Bartosz Kopacz,Facil
+1656107405.286385,e5f8be3e-9abc-454a-91d4-51573c01f7a3,10,fin,Agustin,finalizada,,Facil
+1656107441.0348337,190c0160-8b97-4c7b-9556-641e68c9334f,10,inicio_partida,Franco,,,Normal
+1656107442.3488317,190c0160-8b97-4c7b-9556-641e68c9334f,10,Intento,Franco,ok,Lago Onelli,Normal
+1656107443.4943748,190c0160-8b97-4c7b-9556-641e68c9334f,10,Intento,Franco,error,Lago Viedma,Normal
+1656107544.6039398,16092f51-1607-467b-966d-d8ecf3a489d0,10,inicio_partida,Sofia,,,Normal
+1656107545.6689384,16092f51-1607-467b-966d-d8ecf3a489d0,10,Intento,Sofia,error,Iwo-Tori-shima (Japan),Normal
+1656107546.4489372,16092f51-1607-467b-966d-d8ecf3a489d0,10,Intento,Sofia,error,Merapi (Indonesia),Normal
+1656107546.8984082,16092f51-1607-467b-966d-d8ecf3a489d0,10,Intento,Sofia,error,Pacaya (Guatemala),Normal
+1656107547.294353,16092f51-1607-467b-966d-d8ecf3a489d0,10,Intento,Sofia,error,Long Island (Papua New Guinea),Normal
+1656107548.1104476,16092f51-1607-467b-966d-d8ecf3a489d0,10,Intento,Sofia,error,Kuwae (Vanuatu),Normal
+1656107548.6619399,16092f51-1607-467b-966d-d8ecf3a489d0,10,Intento,Sofia,error,Ulawun (Papua New Guinea),Normal
+1656107549.1093714,16092f51-1607-467b-966d-d8ecf3a489d0,10,Intento,Sofia,error,Iliwerung (Indonesia),Normal
+1656107549.7486932,16092f51-1607-467b-966d-d8ecf3a489d0,10,Intento,Sofia,error,Gamalama (Indonesia),Normal
+1656107550.2209423,16092f51-1607-467b-966d-d8ecf3a489d0,10,Intento,Sofia,ok,Vesuvius (Italy),Normal
+1656107551.118091,16092f51-1607-467b-966d-d8ecf3a489d0,10,Intento,Sofia,error,Okataina (New Zealand),Normal
+1656107552.6669478,16092f51-1607-467b-966d-d8ecf3a489d0,10,fin,Sofia,finalizada,,Normal
+1656107562.261192,24c97e43-23a7-4153-b9ba-545b4e4b7620,10,inicio_partida,Agustin,,,Normal
+1656107563.3369563,24c97e43-23a7-4153-b9ba-545b4e4b7620,10,Intento,Agustin,error,Abdoulaye Dabo,Normal
+1656107607.4104314,20930f46-980e-48b0-9a9a-a32d8dfbc614,10,inicio_partida,Agustin,,,Normal
+1656107608.4791484,20930f46-980e-48b0-9a9a-a32d8dfbc614,10,Intento,Agustin,error,Marcel Risse,Normal
+1656107609.4590123,20930f46-980e-48b0-9a9a-a32d8dfbc614,10,Intento,Agustin,Omision,José Hernández,Normal
+1656107611.2018933,20930f46-980e-48b0-9a9a-a32d8dfbc614,10,Intento,Agustin,error,Fran Gámez,Normal
+1656107611.9031446,20930f46-980e-48b0-9a9a-a32d8dfbc614,10,Intento,Agustin,Omision,Raphael Dwamena,Normal
+1656107613.2683134,20930f46-980e-48b0-9a9a-a32d8dfbc614,10,Intento,Agustin,error,Muammer Yildirim,Normal
+1656107616.034651,20930f46-980e-48b0-9a9a-a32d8dfbc614,10,Intento,Agustin,error,Connor Wood,Normal
+1656107617.2641375,20930f46-980e-48b0-9a9a-a32d8dfbc614,10,Intento,Agustin,error,Iván Cazal,Normal
+1656107618.4810216,20930f46-980e-48b0-9a9a-a32d8dfbc614,10,Intento,Agustin,error,Andrew Nabbout,Normal
+1656107619.0522456,20930f46-980e-48b0-9a9a-a32d8dfbc614,10,Intento,Agustin,ok,Rúben Semedo,Normal
+1656107620.1861799,20930f46-980e-48b0-9a9a-a32d8dfbc614,10,Intento,Agustin,error,Ryang Yong Gi,Normal
+1656107621.2288847,20930f46-980e-48b0-9a9a-a32d8dfbc614,10,fin,Agustin,finalizada,,Normal
+1656107635.619175,d98df243-30c9-4423-9a65-9458876849a9,10,inicio_partida,Franco,,,Normal
+1656107636.2943428,d98df243-30c9-4423-9a65-9458876849a9,10,Intento,Franco,error,Vesuvius (Italy),Normal
+1656107637.2736564,d98df243-30c9-4423-9a65-9458876849a9,10,Intento,Franco,error,Ruiz (Colombia),Normal
+1656107638.1690094,d98df243-30c9-4423-9a65-9458876849a9,10,Intento,Franco,error,Campi Flegrei (Italy),Normal
+1656107638.867751,d98df243-30c9-4423-9a65-9458876849a9,10,Intento,Franco,error,Manam (Papua New Guinea),Normal
+1656107639.6891108,d98df243-30c9-4423-9a65-9458876849a9,10,Intento,Franco,error,Puyehue (Chile),Normal
+1656107640.177975,d98df243-30c9-4423-9a65-9458876849a9,10,Intento,Franco,error,Karthala (Comoros),Normal
+1656107640.9700363,d98df243-30c9-4423-9a65-9458876849a9,10,Intento,Franco,error,Huila (Colombia),Normal
+1656107641.3639996,d98df243-30c9-4423-9a65-9458876849a9,10,Intento,Franco,error,Galeras (Colombia),Normal
+1656107642.1931562,d98df243-30c9-4423-9a65-9458876849a9,10,Intento,Franco,error,Sinarka (Russia),Normal
+1656107642.7940009,d98df243-30c9-4423-9a65-9458876849a9,10,Intento,Franco,error,Lamongan (Indonesia),Normal
+1656107643.8560445,d98df243-30c9-4423-9a65-9458876849a9,10,fin,Franco,finalizada,,Normal
+1656107654.7810528,93b0f8a2-768f-4e14-85e9-1e56f484e8c5,10,inicio_partida,Franco,,,Normal
+1656107655.7415402,93b0f8a2-768f-4e14-85e9-1e56f484e8c5,10,Intento,Franco,ok,Christoffer Aasbak,Normal
+1656107656.246189,93b0f8a2-768f-4e14-85e9-1e56f484e8c5,10,Intento,Franco,error,Scott Galloway,Normal
+1656107657.0236871,93b0f8a2-768f-4e14-85e9-1e56f484e8c5,10,Intento,Franco,error,Ruiz de Galarreta,Normal
+1656107657.8471885,93b0f8a2-768f-4e14-85e9-1e56f484e8c5,10,Intento,Franco,error,Andreas Linde,Normal
+1656107658.361209,93b0f8a2-768f-4e14-85e9-1e56f484e8c5,10,Intento,Franco,ok,Naoki Ishihara,Normal
+1656107659.5650177,93b0f8a2-768f-4e14-85e9-1e56f484e8c5,10,Intento,Franco,error,Jasper Cillessen,Normal
+1656107660.1057034,93b0f8a2-768f-4e14-85e9-1e56f484e8c5,10,Intento,Franco,error,Luca Zander,Normal
+1656107660.99819,93b0f8a2-768f-4e14-85e9-1e56f484e8c5,10,Intento,Franco,error,Emmanuel Sowah,Normal
+1656107666.3014433,93b0f8a2-768f-4e14-85e9-1e56f484e8c5,10,Intento,Franco,error,Otávinho Vila,Normal
+1656107669.8350272,93b0f8a2-768f-4e14-85e9-1e56f484e8c5,10,Intento,Franco,ok,Ryohei Shirasaki,Normal
+1656107670.811015,93b0f8a2-768f-4e14-85e9-1e56f484e8c5,10,fin,Franco,finalizada,,Normal
+1656107689.2771657,d2d6470c-c3b6-481c-911e-24f175c38b51,10,inicio_partida,Sofia,,,Normal
+1656107690.3600807,d2d6470c-c3b6-481c-911e-24f175c38b51,10,Intento,Sofia,error,Clody Menacho,Normal
+1656107691.2820861,d2d6470c-c3b6-481c-911e-24f175c38b51,10,Intento,Sofia,error,Simon Francis,Normal
+1656107692.3532577,d2d6470c-c3b6-481c-911e-24f175c38b51,10,Intento,Sofia,error,Kyle Lafferty,Normal
+1656107693.045059,d2d6470c-c3b6-481c-911e-24f175c38b51,10,Intento,Sofia,error,Joe Powell,Normal
+1656107693.606125,d2d6470c-c3b6-481c-911e-24f175c38b51,10,Intento,Sofia,error,Mi Haolun,Normal
+1656107694.1900764,d2d6470c-c3b6-481c-911e-24f175c38b51,10,Intento,Sofia,error,Aboubakar Kamara,Normal
+1656107695.0400903,d2d6470c-c3b6-481c-911e-24f175c38b51,10,Intento,Sofia,error,José Mari,Normal
+1656107695.5673754,d2d6470c-c3b6-481c-911e-24f175c38b51,10,Intento,Sofia,error,Santamaría,Normal
+1656107696.117605,d2d6470c-c3b6-481c-911e-24f175c38b51,10,Intento,Sofia,error,Sergi Darder,Normal
+1656107698.0561728,d2d6470c-c3b6-481c-911e-24f175c38b51,10,Intento,Sofia,ok,Kostas Manolas,Normal
+1656107699.5320623,d2d6470c-c3b6-481c-911e-24f175c38b51,10,fin,Sofia,finalizada,,Normal
+1656107722.2665908,03a4cb9e-b643-4506-85a8-d547e2815dd0,10,inicio_partida,Sofia,,,Dificil
+1656107723.4971194,03a4cb9e-b643-4506-85a8-d547e2815dd0,10,Intento,Sofia,ok,Lago Salitroso o Sucio,Dificil
+1656107724.2436364,03a4cb9e-b643-4506-85a8-d547e2815dd0,10,Intento,Sofia,ok,Lago Onelli,Dificil
+1656107724.7997537,03a4cb9e-b643-4506-85a8-d547e2815dd0,10,Intento,Sofia,ok,Lago Onelli,Dificil
+1656107725.6226788,03a4cb9e-b643-4506-85a8-d547e2815dd0,10,Intento,Sofia,error,Lago Salitroso o Sucio,Dificil
+1656107726.6551232,03a4cb9e-b643-4506-85a8-d547e2815dd0,10,Intento,Sofia,ok,Lago General Vintter,Dificil
+1656107727.5018373,03a4cb9e-b643-4506-85a8-d547e2815dd0,10,Intento,Sofia,error,Lago Quiroga,Dificil
+1656107728.0028965,03a4cb9e-b643-4506-85a8-d547e2815dd0,10,Intento,Sofia,ok,Lago Quiroga Chico,Dificil
+1656107728.8361351,03a4cb9e-b643-4506-85a8-d547e2815dd0,10,Intento,Sofia,error,Lago Onelli,Dificil
+1656107729.3904307,03a4cb9e-b643-4506-85a8-d547e2815dd0,10,Intento,Sofia,ok,Lago Pueyrredón,Dificil
+1656107730.443159,03a4cb9e-b643-4506-85a8-d547e2815dd0,10,Intento,Sofia,Omision,Lago San Martín,Dificil
+1656107731.402794,03a4cb9e-b643-4506-85a8-d547e2815dd0,10,fin,Sofia,finalizada,,Dificil
+1656107740.6774883,c898ae20-32c4-4957-a76a-a2e6248d3245,10,inicio_partida,Sofia,,,Dificil
+1656107741.3786314,c898ae20-32c4-4957-a76a-a2e6248d3245,10,Intento,Sofia,error,Colima (Mexico),Dificil
+1656107741.745673,c898ae20-32c4-4957-a76a-a2e6248d3245,10,Intento,Sofia,error,Usu (Japan),Dificil
+1656107742.118599,c898ae20-32c4-4957-a76a-a2e6248d3245,10,Intento,Sofia,ok,Iliwerung (Indonesia),Dificil
+1656107742.487116,c898ae20-32c4-4957-a76a-a2e6248d3245,10,Intento,Sofia,ok,Miyake-jima (Japan),Dificil
+1656107743.7942944,c898ae20-32c4-4957-a76a-a2e6248d3245,10,Intento,Sofia,Omision,"Uwayrid, Harrat (Saudi Arabia)",Dificil
+1656107744.0552928,c898ae20-32c4-4957-a76a-a2e6248d3245,10,Intento,Sofia,Omision,Semeru (Indonesia),Dificil
+1656107744.4181402,c898ae20-32c4-4957-a76a-a2e6248d3245,10,Intento,Sofia,error,Tungurahua (Ecuador),Dificil
+1656107744.9801297,c898ae20-32c4-4957-a76a-a2e6248d3245,10,Intento,Sofia,error,Ambrym (Vanuatu),Dificil
+1656107746.7501295,c898ae20-32c4-4957-a76a-a2e6248d3245,10,Intento,Sofia,error,Llaima (Chile),Dificil
+1656107748.0534868,c898ae20-32c4-4957-a76a-a2e6248d3245,10,Intento,Sofia,error,Guntur (Indonesia),Dificil
+1656107748.9337325,c898ae20-32c4-4957-a76a-a2e6248d3245,10,fin,Sofia,finalizada,,Dificil
+1656107766.6155035,588760be-a386-4728-befb-f55a84fd83e3,10,inicio_partida,Franco,,,Facil
+1656107767.6452653,588760be-a386-4728-befb-f55a84fd83e3,10,Intento,Franco,ok,Tinakula (Solomon Is.),Facil
+1656107768.7321763,588760be-a386-4728-befb-f55a84fd83e3,10,Intento,Franco,error,Pinatubo (Philippines),Facil
+1656107828.7923076,588760be-a386-4728-befb-f55a84fd83e3,10,Intento,Franco,timeout,Manam (Papua New Guinea),Facil
+1656107888.9438818,588760be-a386-4728-befb-f55a84fd83e3,10,Intento,Franco,timeout,Pacaya (Guatemala),Facil
+1656107892.2882588,588760be-a386-4728-befb-f55a84fd83e3,10,Intento,Franco,error,Stromboli (Italy),Facil
+1656107893.1952577,588760be-a386-4728-befb-f55a84fd83e3,10,Intento,Franco,error,Kilauea (United States),Facil
+1656107894.6722834,588760be-a386-4728-befb-f55a84fd83e3,10,Intento,Franco,ok,Savai'i (Samoa),Facil
+1656107897.0125573,588760be-a386-4728-befb-f55a84fd83e3,10,Intento,Franco,Omision,Aoba (Vanuatu),Facil
+1656107898.0337439,588760be-a386-4728-befb-f55a84fd83e3,10,Intento,Franco,error,Merapi (Indonesia),Facil
+1656107899.2152402,588760be-a386-4728-befb-f55a84fd83e3,10,Intento,Franco,ok,Hekla (Iceland),Facil
+1656107900.5804117,588760be-a386-4728-befb-f55a84fd83e3,10,fin,Franco,finalizada,,Facil
+1656107910.9703178,103c5824-34c3-4bde-a6f6-0ea5cf749df7,10,inicio_partida,Franco,,,Facil
+1656107912.3792818,103c5824-34c3-4bde-a6f6-0ea5cf749df7,10,Intento,Franco,error,Ruang (Indonesia),Facil
+1656107912.665313,103c5824-34c3-4bde-a6f6-0ea5cf749df7,10,Intento,Franco,error,"Nyamuragira (Congo, DRC)",Facil
+1656107912.969345,103c5824-34c3-4bde-a6f6-0ea5cf749df7,10,Intento,Franco,ok,"Chichon, El (Mexico)",Facil
+1656107913.249398,103c5824-34c3-4bde-a6f6-0ea5cf749df7,10,Intento,Franco,error,Fuego (Guatemala),Facil
+1656107913.9734802,103c5824-34c3-4bde-a6f6-0ea5cf749df7,10,Intento,Franco,error,Miyake-jima (Japan),Facil
+1656107914.4765642,103c5824-34c3-4bde-a6f6-0ea5cf749df7,10,Intento,Franco,error,Mauna Loa (United States),Facil
+1656107914.752593,103c5824-34c3-4bde-a6f6-0ea5cf749df7,10,Intento,Franco,ok,Sangay (Ecuador),Facil
+1656107917.6679802,103c5824-34c3-4bde-a6f6-0ea5cf749df7,10,fin,Franco,cancelada,,Facil
+1656107936.887373,0403cb52-5b98-470e-8868-8c2c4972f0fe,10,inicio_partida,Agustin,,,Dificil
+1656107941.6236558,0403cb52-5b98-470e-8868-8c2c4972f0fe,10,Intento,Agustin,error,Lago Moquehue,Dificil
+1656107942.4997783,0403cb52-5b98-470e-8868-8c2c4972f0fe,10,Intento,Agustin,ok,Lago Strobel,Dificil
+1656107944.0450993,0403cb52-5b98-470e-8868-8c2c4972f0fe,10,Intento,Agustin,error,Lago Pueyrredón,Dificil
+1656107945.0290928,0403cb52-5b98-470e-8868-8c2c4972f0fe,10,Intento,Agustin,ok,Lago Musters,Dificil
+1656107945.6885376,0403cb52-5b98-470e-8868-8c2c4972f0fe,10,Intento,Agustin,ok,Lago Futalaufquen,Dificil
+1656107946.684885,0403cb52-5b98-470e-8868-8c2c4972f0fe,10,Intento,Agustin,error,Lago Nahuel Huapi,Dificil
+1656107947.165624,0403cb52-5b98-470e-8868-8c2c4972f0fe,10,Intento,Agustin,error,Lago Strobel,Dificil
+1656107948.0495336,0403cb52-5b98-470e-8868-8c2c4972f0fe,10,Intento,Agustin,error,Lago Rivadavia,Dificil
+1656107948.8273833,0403cb52-5b98-470e-8868-8c2c4972f0fe,10,Intento,Agustin,error,Lago General Vintter,Dificil
+1656107949.736339,0403cb52-5b98-470e-8868-8c2c4972f0fe,10,Intento,Agustin,error,Lago Tromen,Dificil
+1656107951.0453565,0403cb52-5b98-470e-8868-8c2c4972f0fe,10,fin,Agustin,finalizada,,Dificil

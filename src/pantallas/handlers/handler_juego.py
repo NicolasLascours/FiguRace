@@ -147,7 +147,7 @@ def eventos(evento, ventana, partida, correcta, lista_data, perfil_actual):
         if partida.ronda_actual <= partida.cant_rondas:
             actualizar_partida(ventana, partida)
             ventana["-Puntaje-"].update(f'Puntaje: {partida.puntaje()}')
-            registro_jugadas(evento, perfil_actual, '', partida)
+            registro_jugadas(evento, perfil_actual, correcta, partida)
     elif (evento == 'OPCION 0' or evento == 'OPCION 1' or evento == 'OPCION 2' 
             or evento == 'OPCION 3' or evento == 'OPCION 4'): 
             respuesta = int(evento[-1])
