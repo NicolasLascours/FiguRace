@@ -83,7 +83,7 @@ def registro_jugadas(evento, perfil_actual, correcta, lista_data, respuesta, par
         elif evento == "Correcta":
             writer.writerow([time.time(), partida.uuid, partida.cant_rondas, gen, 'Intento', perfil_actual, "ok", lista_data[respuesta][5], correcta[5], config["Dificultad"]])
         elif evento == "Pasar":
-            writer.writerow([time.time(), partida.uuid, partida.cant_rondas, gen, 'Omitir', perfil_actual, "Omision", '', correcta[5], config["Dificultad"]])
+            writer.writerow([time.time(), partida.uuid, partida.cant_rondas, gen, 'Intento', perfil_actual, "Omision", '', correcta[5], config["Dificultad"]])
         elif evento == "Incorrecta":
             writer.writerow([time.time(), partida.uuid, partida.cant_rondas, gen, 'Intento', perfil_actual, "error", lista_data[respuesta][5], correcta[5], config["Dificultad"]])
         elif evento == "Abandonar el juego" or evento == sg.WIN_CLOSED:

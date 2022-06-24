@@ -15,11 +15,9 @@ def elegir_perfil():
     los jugadores para luego en la pantalla puedan
     ser elegidos
     """
-    l = []
     with open(ROOT_PERFILES, 'r') as archivo:
         datos = json.load(archivo)
-        for linea in datos:
-            l.append(linea['nick'])
+        l =[linea['nick'] for linea in datos]
     return l
 
 

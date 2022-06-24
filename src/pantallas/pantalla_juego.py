@@ -29,8 +29,6 @@ def comenzar(perfil_actual, data):
     """
     Funcion que realiza la ejecucion de la pantalla del juego
     """
-    
-    # ventana del juego
     lista_data = []
     lista_carac = ['', '', '', '', '']
     partida = Partida()
@@ -53,7 +51,6 @@ def comenzar(perfil_actual, data):
            correcta, lista_data, lista_carac = act_completa(ventana, cant, header, datos)
     sg.popup_ok('La cantidad de puntos obtenidos es: ', partida.puntaje())
     if partida.ronda_actual > partida.cant_rondas:
-        print(evento[0])
         registro_jugadas('Fin', perfil_actual, correcta, lista_data, '', partida)
         guardar_partida(perfil_actual, "Finalizada", partida.puntaje(), config["Dificultad"])
     ventana.close()
