@@ -2,7 +2,6 @@ import json
 import PySimpleGUI as sg
 from roots import ROOT_REGISTRO, ROOT_VOLCANS, ROOT_LAGOS, ROOT_FIFA, ROOT_CONFIG
 import csv
-import uuid
 import time
 import os
 
@@ -63,7 +62,7 @@ def abrir_configuracion():
             json.dump(dif_por_defecto, archivo_json)
             return dif_por_defecto    
 
-def registro_jugadas (evento, perfil_actual, correcta, lista_data, respuesta):
+def registro_jugadas (evento, perfil_actual, correcta, lista_data, respuesta, uui):
     """
     Funcion que actualiza los eventos que ocurren en
     el juego y los guarda en un archico csv
@@ -72,15 +71,17 @@ def registro_jugadas (evento, perfil_actual, correcta, lista_data, respuesta):
     with open (ROOT_REGISTRO, 'a', encoding='utf_8') as reg:
         writer = csv.writer(reg)
         if (evento == '__TIMEOUT__'):
-            writer.writerow([time.time(), uuid.uuid4(), 'Intento', perfil_actual, "timeout", "", correcta[5], config["Dificultad"]])
+            writer.writerow([time.time(), uui, 'Intento', perfil_actual, "timeout", "", correcta[5], config["Dificultad"]])
         elif (evento == "Correcta"):
-            writer.writerow([time.time(), uuid.uuid4(), 'Intento', perfil_actual, "ok", lista_data[respuesta][5], correcta[5], config["Dificultad"]])
+            writer.writerow([time.time(), uui, 'Intento', perfil_actual, "ok", lista_data[respuesta][5], correcta[5], config["Dificultad"]])
+        elif (evento == "Pasar"):
+            writer.writerow([time.time(), uui, 'Omitir', perfil_actual, "Omision", '' , correcta[5], config["Dificultad"]])
         elif (evento == "Incorrecta"):
-            writer.writerow([time.time(), uuid.uuid4(), 'Intento', perfil_actual, "error", lista_data[respuesta][5], correcta[5], config["Dificultad"]])
+            writer.writerow([time.time(), uui, 'Intento', perfil_actual, "error", lista_data[respuesta][5], correcta[5], config["Dificultad"]])
         elif (evento == "Abandonar el juego" or evento == sg.WIN_CLOSED):
-            writer.writerow([time.time(), uuid.uuid4(), 'fin', perfil_actual, "cancelada", '', '', config["Dificultad"]])
+            writer.writerow([time.time(), uui, 'fin', perfil_actual, "cancelada", '', '', config["Dificultad"]])
         else:
-            writer.writerow([time.time(), uuid.uuid4(), 'fin', perfil_actual, "finalizada", '', '', config["Dificultad"]])
+            writer.writerow([time.time(), uui, 'fin', perfil_actual, "finalizada", '', '', config["Dificultad"]])
 
 
 def convert(seconds):
@@ -128,7 +129,7 @@ def actualizacion(ventana, lista_data, cant, header, lista_carac):
         ventana["CARAC "+str(i)].update(f"{header[i]}: {lista_carac[i]}")
 
 
-def eventos(evento, ventana, partida, correcta, lista_data, perfil_actual):
+def eventos(evento, ventana, partida, correcta, lista_data, perfil_actual, uui):
     """
     Funcion que controla la logica y
     eventos que ocurren en el juego
@@ -136,17 +137,16 @@ def eventos(evento, ventana, partida, correcta, lista_data, perfil_actual):
     if evento == 'Pasar':
         if partida.ronda_actual <= partida.cant_rondas:
             actualizar_partida(ventana, partida)
-            partida.decrementar_puntaje()
             ventana["-Puntaje-"].update(f'Puntaje: {partida.puntaje()}')
-            registro_jugadas(evento, perfil_actual, correcta, lista_data, '')
+            registro_jugadas(evento, perfil_actual, correcta, lista_data, '', uui)
     elif (evento == 'OPCION 0' or evento == 'OPCION 1' or evento == 'OPCION 2' 
             or evento == 'OPCION 3' or evento == 'OPCION 4'): 
             respuesta = int(evento[-1])
             if lista_data[respuesta][5] == correcta[5]:
                 partida.incrementar_puntaje()
-                registro_jugadas("Correcta", perfil_actual, correcta, lista_data, respuesta)
+                registro_jugadas("Correcta", perfil_actual, correcta, lista_data, respuesta, uui)
             else:
                 partida.decrementar_puntaje()
-                registro_jugadas("Incorrecta", perfil_actual, correcta, lista_data, respuesta)
+                registro_jugadas("Incorrecta", perfil_actual, correcta, lista_data, respuesta, uui)
             ventana['-Puntaje-'].update(f'Puntaje: {partida.puntaje()}')
             actualizar_partida(ventana, partida)
