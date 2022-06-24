@@ -3,7 +3,6 @@ import PySimpleGUI as sg
 from roots import ROOT_REGISTRO, ROOT_VOLCANS, ROOT_LAGOS, ROOT_FIFA, ROOT_CONFIG
 import csv
 import time
-import os
 
 def abrir_volcanes():
     """
@@ -62,6 +61,14 @@ def abrir_configuracion():
             json.dump(dif_por_defecto, archivo_json)
             return dif_por_defecto    
 
+
+def inicializacion_partida (perfil_actual, dif, uui):
+    with open (ROOT_REGISTRO, 'a') as reg:
+        writer = csv.writer(reg)
+        writer.writerow([time.time(), uui, "inicio_partida",
+                        perfil_actual, '', '', '', dif])
+
+
 def registro_jugadas (evento, perfil_actual, correcta, lista_data, respuesta, uui):
     """
     Funcion que actualiza los eventos que ocurren en
@@ -71,13 +78,13 @@ def registro_jugadas (evento, perfil_actual, correcta, lista_data, respuesta, uu
     with open (ROOT_REGISTRO, 'a', encoding='utf_8') as reg:
         writer = csv.writer(reg)
         if (evento == '__TIMEOUT__'):
-            writer.writerow([time.time(), uui, 'Intento', perfil_actual, "timeout", "", correcta[5], config["Dificultad"]])
+            writer.writerow([time.time(), uui, 'intento', perfil_actual, "timeout", "", correcta[5], config["Dificultad"]])
         elif (evento == "Correcta"):
-            writer.writerow([time.time(), uui, 'Intento', perfil_actual, "ok", lista_data[respuesta][5], correcta[5], config["Dificultad"]])
+            writer.writerow([time.time(), uui, 'intento', perfil_actual, "ok", lista_data[respuesta][5], correcta[5], config["Dificultad"]])
         elif (evento == "Pasar"):
-            writer.writerow([time.time(), uui, 'Omitir', perfil_actual, "Omision", '' , correcta[5], config["Dificultad"]])
+            writer.writerow([time.time(), uui, 'omitir', perfil_actual, "omision", '' , correcta[5], config["Dificultad"]])
         elif (evento == "Incorrecta"):
-            writer.writerow([time.time(), uui, 'Intento', perfil_actual, "error", lista_data[respuesta][5], correcta[5], config["Dificultad"]])
+            writer.writerow([time.time(), uui, 'intento', perfil_actual, "error", lista_data[respuesta][5], correcta[5], config["Dificultad"]])
         elif (evento == "Abandonar el juego" or evento == sg.WIN_CLOSED):
             writer.writerow([time.time(), uui, 'fin', perfil_actual, "cancelada", '', '', config["Dificultad"]])
         else:

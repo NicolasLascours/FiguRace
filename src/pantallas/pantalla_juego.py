@@ -1,9 +1,8 @@
 import PySimpleGUI as sg
 from src.objects.partida import Partida
-import random
-import uuid
 from .layouts.layout_juego import layouts, config_inicial
-from .handlers.handler_juego import abrir_configuracion, actualizar_tiempo, eventos, registro_jugadas, actualizacion
+from .handlers.handler_juego import abrir_configuracion, actualizar_tiempo, eventos
+from .handlers.handler_juego import inicializacion_partida, registro_jugadas, actualizacion
 from roots import ROOT_PUNTAJES
 from .handlers.handler_perfiles import datos_de_perfiles, obtener_datos_nick
 import csv
@@ -28,29 +27,29 @@ def comenzar(perfil_actual, data):
     """
     Funcion que realiza la ejecucion de la pantalla del juego
     """
-    partida = Partida()
     # ventana del juego
-    uui = uuid.uuid4
     lista_data = []
     lista_carac = ['', '', '', '', '']
+    partida = Partida()
     config = abrir_configuracion()
+    inicializacion_partida(perfil_actual, config['Dificultad'], partida.uuid)
     lista, cant, datos, correcta, header = layouts(data, lista_data, lista_carac ,config)
     ventana = sg.Window('Figurace', lista, size=(500, 500))
     while True and partida.ronda_actual <= partida.cant_rondas:
         evento = ventana.read(timeout=250)
         if evento[0] != "__TIMEOUT__" and (evento[0] != sg.WIN_CLOSED or evento[0] != "Abandonar el juego"):
-            eventos(evento[0], ventana ,partida,correcta, lista_data, perfil_actual, uui)
+            eventos(evento[0], ventana ,partida,correcta, lista_data, perfil_actual, partida.uuid)
             correcta, lista_data, lista_carac = act_completa(ventana, cant, header, datos)
         if evento[0] == sg.WIN_CLOSED or evento[0] == "Abandonar el juego":
-            registro_jugadas(evento[0], perfil_actual, correcta, lista_data, '', uui)
+            registro_jugadas(evento[0], perfil_actual, correcta, lista_data, '', partida.uuid)
             guardar_partida(perfil_actual,"Cancelada",partida.puntaje(),config["Dificultad"])
             break
         restante = actualizar_tiempo(ventana,partida)
         if evento[0] == "__TIMEOUT__" and restante <= 0:
-           registro_jugadas (evento[0], perfil_actual, correcta, lista_data, '', uui)
+           registro_jugadas (evento[0], perfil_actual, correcta, lista_data, '', partida.uuid)
            correcta, lista_data, lista_carac = act_completa(ventana, cant, header, datos)
     sg.popup_ok('La cantidad de puntos obtenidos es: ', partida.puntaje())
     if evento[0] != "Abandonar el juego" and evento[0] != sg.WIN_CLOSED:
-        registro_jugadas(evento[0], perfil_actual, correcta, lista_data, '', uui)
+        registro_jugadas(evento[0], perfil_actual, correcta, lista_data, '', partida.uuid)
         guardar_partida(perfil_actual,"Finalizada",partida.puntaje(),config["Dificultad"])
     ventana.close()

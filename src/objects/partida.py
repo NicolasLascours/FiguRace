@@ -1,5 +1,6 @@
 import time
 from src.pantallas.handlers.handler_juego import abrir_configuracion
+import uuid
 
 class Partida:
 
@@ -8,6 +9,7 @@ class Partida:
         self._tiempo_partida_inicial = time.time()
         self._tiempo_ronda_inicial = time.time()
         self._ronda_actual = 1
+        self._uuid = uuid.uuid4()
         self._puntaje = 0
     
     @property
@@ -33,6 +35,10 @@ class Partida:
     @property
     def ronda_actual(self):
         return self._ronda_actual
+
+    @property
+    def uuid(self):
+        return self._uuid
 
     def puntaje(self):
         return self._puntaje
