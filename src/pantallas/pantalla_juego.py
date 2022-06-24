@@ -30,7 +30,7 @@ def comenzar(perfil_actual, data):
     """
     partida = Partida()
     # ventana del juego
-    uui = uuid.uuid4
+    uui = uuid.uuid4()
     lista_data = []
     lista_carac = ['', '', '', '', '']
     config = abrir_configuracion()
