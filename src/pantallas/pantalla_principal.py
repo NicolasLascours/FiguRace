@@ -3,7 +3,6 @@ import PySimpleGUI as sg
 from .layouts.layout_principal import layouts_prin
 from .handlers.handler_principal import eventos
 from os.path import exists
-import os
 from .handlers.handler_principal import creacion_csv
 from roots import ROOT_REGISTRO
 
