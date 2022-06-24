@@ -15,9 +15,11 @@ Una vez finalice la instalación, puede comenzar a utilizarlo.
 1. Asegúrese de tener las librerías necesarias para su ejecución (en Consideración para su uso)  
 2. Ejecute `figurace.py`  
 3. Una vez abierto el programa, en caso de necesitarlo, debe crear un perfil en la opción `Perfiles -> Crear Perfil`. Luego de crearlo, vuelva al menú.  
-4. Cuando ya tenga un perfil para usar, debe seleccionarlo en la casilla del menú y después presionar `OK`  
-5. En el menú puede seleccionar una dificultad o también puede ingresar a `Configuracion` para realizar una configuración personalizada. Por defecto queda guardada la última dificultad usada.  
-6. Una vez tenga el perfil seleccionado y la dificultad deseada, puede presionar el botón de jugar
+4. Cuando ya tenga un perfil para usar, debe seleccionarlo en la casilla del menú.  
+5. En el menú puede eligir una dificultad seleccionando la deseada y luego presionando en el botón `OK`. Por defecto queda guardada la última dificultad usada.  
+La cantidad de caracteristicas que aparecen por dificultad y las demas configuraciones pueden ser modificadas en `Configuracion`    
+6. Una vez tenga el perfil seleccionado y la dificultad deseada, puede presionar el botón de jugar.  
+7. Luego aparecerá una nueva ventana donde deberá elegir el dataset a utilizar y luego presionar el botón `OK` para comenzar a jugar. 
 
 ### Sitios de los datasets:
 -  Lagos de Argentina: https://drive.google.com/file/d/1PzfCgiAhPAq8Cztx9psk3puxDPHsjnqJ/view?usp=sharing
