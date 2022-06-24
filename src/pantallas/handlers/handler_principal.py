@@ -9,7 +9,7 @@ from ..pantalla_juego import comenzar
 from ..pantalla_puntajes import ventana_puntajes
 from ..pantalla_perfiles import ventana_perfiles
 from src.pantallas.handlers.handler_juego import abrir_configuracion
-from roots import ROOT_DIR, ROOT_PERFILES, ROOT_CONFIG
+from roots import ROOT_PERFILES, ROOT_CONFIG, ROOT_REGISTRO
 
 def elegir_perfil():
     """
@@ -56,18 +56,18 @@ def cargar_config(dif):
         sg.popup_ok('Se han actualizado las configuraciones para la dificultad ', dif)
 
 
-def inicializacion_partida (ROOT_DIR, perfil_actual, dif):
-    with open (os.path.join(ROOT_DIR, 'Registro.csv'), 'a') as reg:
+def inicializacion_partida (perfil_actual, dif):
+    with open (ROOT_REGISTRO, 'a') as reg:
         writer = csv.writer(reg)
         writer.writerow([time.time(), uuid.uuid4(), "inicio_partida", perfil_actual, '', '', '', dif])
 
 
 def creacion_csv():
-    with open ('Registro.csv', 'w') as reg:
+    with open ('registro.csv', 'w') as reg:
         writer = csv.writer(reg)
         writer.writerow(["Timestamp", "ID", "Evento", "Usuario", "Estado", "Texto Ingresado", "Respuesta", "Nivel"])
 
-def eventos(evento, ventana, ROOT_DIR):
+def eventos(evento, ventana):
     """
     funcion que responde a los eventos que se 
     pueden originar en la llamada del modulo principal
@@ -79,8 +79,8 @@ def eventos(evento, ventana, ROOT_DIR):
         if perfil_actual != '':
             ventana.Hide()
             event, data = eleccion_data()
-            inicializacion_partida(ROOT_DIR, perfil_actual, evento[1]['-COMBO DIFICULTAD-'])
-            comenzar(ROOT_DIR, perfil_actual, data)
+            inicializacion_partida(perfil_actual, evento[1]['-COMBO DIFICULTAD-'])
+            comenzar(perfil_actual, data)
             ventana.UnHide()
         else:
             sg.popup_ok('Antes de jugar debe seleccionar un perfil')
