@@ -8,12 +8,13 @@ from ..handlers.handler_juego import convert, abrir_volcanes, abrir_lagos, abrir
 def config_inicial(lista_data, datos, cant, lista_carac):
     for i in range(5):
         lista_data.append(random.choice(list(datos)))
-    correcta = lista_data[random.randint(0,4)]
+    correcta = lista_data[random.randint(0, 4)]
     for i in range(int(cant)):
         lista_carac[i] = correcta[i]
     return correcta, lista_data, lista_carac
 
-def eleccion (data):
+
+def eleccion(data):
     if data['Eleccion'][0] == 'Volcan':
         header, datos = abrir_volcanes()
         nom = "Volcanes!!"

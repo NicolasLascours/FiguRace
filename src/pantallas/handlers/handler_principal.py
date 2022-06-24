@@ -1,6 +1,5 @@
 import json
 import csv
-import os
 import time
 import uuid
 import PySimpleGUI as sg
@@ -10,6 +9,7 @@ from ..pantalla_puntajes import ventana_puntajes
 from ..pantalla_perfiles import ventana_perfiles
 from src.pantallas.handlers.handler_juego import abrir_configuracion
 from roots import ROOT_PERFILES, ROOT_CONFIG, ROOT_REGISTRO
+
 
 def elegir_perfil():
     """
@@ -24,10 +24,12 @@ def elegir_perfil():
             l.append(linea['nick'])
     return l
 
+
 def eleccion_data():
     event, values = sg.Window('Elija un dataset para jugar', [[sg.Text('Elegir uno->'), sg.Listbox(['Volcan', 'Fifa', 'Lagos'], 
-    size=(20, 3), key='Eleccion')],[sg.Button('Ok')]]).read(close=True)
+    size=(20, 3), key='Eleccion')], [sg.Button('Ok')]]).read(close=True)
     return event, values
+
 
 def cargar_config(dif):
     """
@@ -47,23 +49,24 @@ def cargar_config(dif):
         sg.popup_ok('Se ha actualizado la dificultad a ', dif)
 
 
-def inicializacion_partida (perfil_actual, dif, uui):
+def inicializacion_partida(perfil_actual, dif, uui):
     config = abrir_configuracion()
-    with open (ROOT_PERFILES, 'r') as reg:
+    with open(ROOT_PERFILES, 'r') as reg:
         perfiles = json.load(reg)
         i = 0
-        while (i < len(perfiles) and (perfiles[i]['nick'] != perfil_actual)):
-            i+=1
+        while i < len(perfiles) and (perfiles[i]['nick'] != perfil_actual):
+            i += 1
         gen = perfiles[i]['genero']
-    with open (ROOT_REGISTRO, 'a') as reg:
+    with open(ROOT_REGISTRO, 'a') as reg:
         writer = csv.writer(reg)
-        writer.writerow([time.time(), uui, config["Rondas"] , gen ,"inicio_partida", perfil_actual, '', '', '', dif])
+        writer.writerow([time.time(), uui, config["Rondas"], gen, "inicio_partida", perfil_actual, '', '', '', dif])
 
 
 def creacion_csv():
-    with open ('registro.csv', 'w') as reg:
+    with open('registro.csv', 'w') as reg:
         writer = csv.writer(reg)
-        writer.writerow(["Timestamp", "ID", "Objectos a adivinar", "genero" ,"Evento", "Usuario", "Estado", "Texto Ingresado", "Respuesta", "Nivel"])
+        writer.writerow(["Timestamp", "ID", "Objectos a adivinar", "genero", "Evento", "Usuario", "Estado", "Texto Ingresado", "Respuesta", "Nivel"])
+
 
 def eventos(evento, ventana):
     """
@@ -78,8 +81,8 @@ def eventos(evento, ventana):
             ventana.Hide()
             uui = uuid.uuid4()
             event, data = eleccion_data()
-            while (not data["Eleccion"]):
-                sg.popup_ok('Problemas!','Por favor seleccione un dataset.')    
+            while not data["Eleccion"]:
+                sg.popup_ok('Problemas!', 'Por favor seleccione un dataset.')
                 event, data = eleccion_data()
             inicializacion_partida(perfil_actual, evento[1]['-COMBO DIFICULTAD-'], uui)
             comenzar(perfil_actual, data, uui)

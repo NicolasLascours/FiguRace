@@ -3,7 +3,7 @@ import PySimpleGUI as sg
 from roots import ROOT_REGISTRO, ROOT_VOLCANS, ROOT_LAGOS, ROOT_FIFA, ROOT_CONFIG, ROOT_PERFILES
 import csv
 import time
-import os
+
 
 def abrir_volcanes():
     """
@@ -64,32 +64,32 @@ def abrir_configuracion():
 
 
  ##["Timestamp", "ID", "Objectos a adivinar", "genero" ,"Evento", "Usuario", "Estado", "Texto Ingresado", "Respuesta", "Nivel"]
-def registro_jugadas (evento, perfil_actual, correcta, lista_data, respuesta, uui, partida):
+def registro_jugadas(evento, perfil_actual, correcta, lista_data, respuesta, uui, partida):
     """
     Funcion que actualiza los eventos que ocurren en
     el juego y los guarda en un archico csv
     """
     config = abrir_configuracion()
-    with open (ROOT_PERFILES, 'r') as reg:
+    with open(ROOT_PERFILES, 'r') as reg:
         perfiles = json.load(reg)
         i = 0
-        while (i < len(perfiles) and (perfiles[i]['nick'] != perfil_actual)):
-            i+=1
+        while i < len(perfiles) and (perfiles[i]['nick'] != perfil_actual):
+            i += 1
         gen = perfiles[i]['genero']
-    with open (ROOT_REGISTRO, 'a', encoding='utf_8') as reg:
+    with open(ROOT_REGISTRO, 'a', encoding='utf_8') as reg:
         writer = csv.writer(reg)
-        if (evento == '__TIMEOUT__'):
-            writer.writerow([time.time(), uui, partida.cant_rondas , gen ,'Intento', perfil_actual, "timeout", "", correcta[5], config["Dificultad"]])
-        elif (evento == "Correcta"):
-            writer.writerow([time.time(), uui, partida.cant_rondas , gen ,'Intento', perfil_actual, "ok", lista_data[respuesta][5], correcta[5], config["Dificultad"]])
-        elif (evento == "Pasar"):
-            writer.writerow([time.time(), uui, partida.cant_rondas , gen ,'Omitir', perfil_actual, "Omision", '' , correcta[5], config["Dificultad"]])
-        elif (evento == "Incorrecta"):
-            writer.writerow([time.time(), uui, partida.cant_rondas , gen ,'Intento', perfil_actual, "error", lista_data[respuesta][5], correcta[5], config["Dificultad"]])
-        elif (evento == "Abandonar el juego" or evento == sg.WIN_CLOSED):
-            writer.writerow([time.time(), uui, partida.cant_rondas , gen ,'fin', perfil_actual, "cancelada", '', '', config["Dificultad"]])
+        if evento == '__TIMEOUT__':
+            writer.writerow([time.time(), uui, partida.cant_rondas, gen, 'Intento', perfil_actual, "timeout", "", correcta[5], config["Dificultad"]])
+        elif evento == "Correcta":
+            writer.writerow([time.time(), uui, partida.cant_rondas, gen, 'Intento', perfil_actual, "ok", lista_data[respuesta][5], correcta[5], config["Dificultad"]])
+        elif evento == "Pasar":
+            writer.writerow([time.time(), uui, partida.cant_rondas, gen, 'Omitir', perfil_actual, "Omision", '', correcta[5], config["Dificultad"]])
+        elif evento == "Incorrecta":
+            writer.writerow([time.time(), uui, partida.cant_rondas, gen, 'Intento', perfil_actual, "error", lista_data[respuesta][5], correcta[5], config["Dificultad"]])
+        elif evento == "Abandonar el juego" or evento == sg.WIN_CLOSED:
+            writer.writerow([time.time(), uui, partida.cant_rondas, gen, 'fin', perfil_actual, "cancelada", '', '', config["Dificultad"]])
         else:
-            writer.writerow([time.time(), uui, partida.cant_rondas , gen,'fin', perfil_actual, "finalizada", '', '', config["Dificultad"]])
+            writer.writerow([time.time(), uui, partida.cant_rondas, gen, 'fin', perfil_actual, "finalizada", '', '', config["Dificultad"]])
 
 
 def convert(seconds):
@@ -122,7 +122,7 @@ def actualizar_tiempo(ventana, partida):
     return restante
 
 
-def actualizar_partida (ventana, partida):
+def actualizar_partida(ventana, partida):
     partida.incrementar_ronda()
     if partida.ronda_actual <= partida.cant_rondas:
         ventana['-RONDAS-'].update(f'Ronda actual: {partida.ronda_actual}')
@@ -131,7 +131,7 @@ def actualizar_partida (ventana, partida):
 
 
 def actualizacion(ventana, lista_data, cant, header, lista_carac):
-    for i in range (5):
+    for i in range(5):
         ventana["OPCION "+str(i)].update(f'{lista_data[i][5]}')
     for i in range(int(cant)):
         ventana["CARAC "+str(i)].update(f"{header[i]}: {lista_carac[i]}")
