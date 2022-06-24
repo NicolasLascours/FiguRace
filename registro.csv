@@ -1,0 +1,101 @@
+Timestamp,ID,Objectos a adivinar,Genero,Evento,Usuario,Estado,Texto Ingresado,Respuesta,Nivel
+1656090677.7251313,15534c5d-f960-4e9b-83e5-aafbb8fd95f2,10,Masculino,inicio_partida,Agustin,,,,Facil
+1656090681.056655,15534c5d-f960-4e9b-83e5-aafbb8fd95f2,10,Masculino,Intento,Agustin,ok,Jan Kirchhoff,Jan Kirchhoff,Facil
+1656090685.186659,15534c5d-f960-4e9b-83e5-aafbb8fd95f2,10,Masculino,Intento,Agustin,error,Oliver Casey,Stephan Andersen,Facil
+1656090687.737651,15534c5d-f960-4e9b-83e5-aafbb8fd95f2,10,Masculino,Intento,Agustin,error,Oscar Giménez,João Afonso,Facil
+1656090691.6743827,15534c5d-f960-4e9b-83e5-aafbb8fd95f2,10,Masculino,Intento,Agustin,ok,Fernando Meza,Fernando Meza,Facil
+1656090694.084632,15534c5d-f960-4e9b-83e5-aafbb8fd95f2,10,Masculino,Intento,Agustin,error,Jan Hoekstra,Alex Schalk,Facil
+1656090697.7443805,15534c5d-f960-4e9b-83e5-aafbb8fd95f2,10,Masculino,Intento,Agustin,ok,João Nunes,João Nunes,Facil
+1656090702.2196684,15534c5d-f960-4e9b-83e5-aafbb8fd95f2,10,Masculino,Intento,Agustin,ok,Joe Garner,Joe Garner,Facil
+1656090706.8476827,15534c5d-f960-4e9b-83e5-aafbb8fd95f2,10,Masculino,Intento,Agustin,error,Jakub Bartkowski,Lass Bangoura,Facil
+1656090715.0683253,15534c5d-f960-4e9b-83e5-aafbb8fd95f2,10,Masculino,Intento,Agustin,error,Jean-Luc Dompé,Bright Edomwonyi,Facil
+1656090718.1276941,15534c5d-f960-4e9b-83e5-aafbb8fd95f2,10,Masculino,Intento,Agustin,error,Jefferson Farfán,Steven Zuber,Facil
+1656090720.7131295,15534c5d-f960-4e9b-83e5-aafbb8fd95f2,10,Masculino,fin,Agustin,finalizada,,,Facil
+1656090727.7301395,c8db48bc-79f5-4db4-aa81-d15314b96843,10,Masculino,inicio_partida,Franco,,,,Facil
+1656090728.8758283,c8db48bc-79f5-4db4-aa81-d15314b96843,10,Masculino,Intento,Franco,ok,Lago Pellegrini,Lago Pellegrini,Facil
+1656090730.3283858,c8db48bc-79f5-4db4-aa81-d15314b96843,10,Masculino,Intento,Franco,error,Lago Buenos Aires,Lago Viedma,Facil
+1656090731.7396607,c8db48bc-79f5-4db4-aa81-d15314b96843,10,Masculino,Intento,Franco,error,Lago Espejo,Lago Buenos Aires,Facil
+1656090732.5750523,c8db48bc-79f5-4db4-aa81-d15314b96843,10,Masculino,Intento,Franco,error,Lago Currhué,Lago Pico Nº 1,Facil
+1656090733.8617113,c8db48bc-79f5-4db4-aa81-d15314b96843,10,Masculino,Intento,Franco,error,Lago Huechulafquen,Lago Paimún,Facil
+1656090734.8272407,c8db48bc-79f5-4db4-aa81-d15314b96843,10,Masculino,Intento,Franco,ok,Lago Yehuin,Lago Yehuin,Facil
+1656090736.0185485,c8db48bc-79f5-4db4-aa81-d15314b96843,10,Masculino,Intento,Franco,ok,Lago Pueyrredón,Lago Pueyrredón,Facil
+1656090737.3325534,c8db48bc-79f5-4db4-aa81-d15314b96843,10,Masculino,Intento,Franco,error,Lago Blanco,Lago Perito Moreno,Facil
+1656090738.6477072,c8db48bc-79f5-4db4-aa81-d15314b96843,10,Masculino,Intento,Franco,error,Lago Fontana,Lago Correntoso,Facil
+1656090742.3227177,c8db48bc-79f5-4db4-aa81-d15314b96843,10,Masculino,Intento,Franco,error,Lago San Martín,Lago Buenos Aires,Facil
+1656090743.4476779,c8db48bc-79f5-4db4-aa81-d15314b96843,10,Masculino,fin,Franco,finalizada,,,Facil
+1656090750.32072,a6554783-d2f3-4589-b315-52c1763e6560,10,Masculino,inicio_partida,Agustin,,,,Facil
+1656090751.2183802,a6554783-d2f3-4589-b315-52c1763e6560,10,Masculino,Intento,Agustin,error,Abdallah Said,Vincent Pajot,Facil
+1656090751.831691,a6554783-d2f3-4589-b315-52c1763e6560,10,Masculino,Intento,Agustin,error,José Quintero,Cristian Costin,Facil
+1656090752.2167275,a6554783-d2f3-4589-b315-52c1763e6560,10,Masculino,Intento,Agustin,error,Andriy Yarmolenko,Michele Rigione,Facil
+1656090752.7946944,a6554783-d2f3-4589-b315-52c1763e6560,10,Masculino,Intento,Agustin,error,Tom Baumgart,Angulo,Facil
+1656090753.1552184,a6554783-d2f3-4589-b315-52c1763e6560,10,Masculino,Intento,Agustin,error,Julian Faye Lund,Alejandro Frezzotti,Facil
+1656090753.4188542,a6554783-d2f3-4589-b315-52c1763e6560,10,Masculino,Intento,Agustin,error,Jan Löhmannsröben,Ilya Pomazun,Facil
+1656090754.1656973,a6554783-d2f3-4589-b315-52c1763e6560,10,Masculino,Intento,Agustin,ok,Michael Lansing,Michael Lansing,Facil
+1656090755.1446962,a6554783-d2f3-4589-b315-52c1763e6560,10,Masculino,Intento,Agustin,error,Joselito Vaca,Takumi Minamino,Facil
+1656090755.5500154,a6554783-d2f3-4589-b315-52c1763e6560,10,Masculino,Intento,Agustin,error,John Fajardo,Julian Chabot,Facil
+1656090755.9230697,a6554783-d2f3-4589-b315-52c1763e6560,10,Masculino,Intento,Agustin,error,Meschack Elia,De la Fuente,Facil
+1656090756.9363062,a6554783-d2f3-4589-b315-52c1763e6560,10,Masculino,fin,Agustin,finalizada,,,Facil
+1656090762.4427316,7a7ecc45-61b3-4381-a385-71db52da43a6,10,Masculino,inicio_partida,Agustin,,,,Facil
+1656090763.1277738,7a7ecc45-61b3-4381-a385-71db52da43a6,10,Masculino,Intento,Agustin,error,Lago Azara,Lago Río Bueno,Facil
+1656090763.9721558,7a7ecc45-61b3-4381-a385-71db52da43a6,10,Masculino,Intento,Agustin,ok,Lago Fagnano,Lago Fagnano,Facil
+1656090764.421433,7a7ecc45-61b3-4381-a385-71db52da43a6,10,Masculino,Intento,Agustin,error,Lago General Vintter,Lago Blanco,Facil
+1656090764.7857301,7a7ecc45-61b3-4381-a385-71db52da43a6,10,Masculino,Intento,Agustin,error,Lago Tromen,Lago Quillén,Facil
+1656090765.1913743,7a7ecc45-61b3-4381-a385-71db52da43a6,10,Masculino,Intento,Agustin,error,Lago Yehuin,Lago Burmeister,Facil
+1656090817.6743386,c4857037-0987-424c-a2ec-0c61688de012,10,Masculino,inicio_partida,Franco,,,,Normal
+1656090818.313886,c4857037-0987-424c-a2ec-0c61688de012,10,Masculino,Intento,Franco,error,Lago Belgrano,Lago Musters,Normal
+1656090818.5527008,c4857037-0987-424c-a2ec-0c61688de012,10,Masculino,Intento,Franco,error,Lago Rosario,Lago San Martín,Normal
+1656090818.8277502,c4857037-0987-424c-a2ec-0c61688de012,10,Masculino,Intento,Franco,error,Lago Nansen,Lago Falkner,Normal
+1656090819.1124454,c4857037-0987-424c-a2ec-0c61688de012,10,Masculino,Intento,Franco,error,Lago Salitroso o Sucio,Lago Lácar,Normal
+1656090819.3687458,c4857037-0987-424c-a2ec-0c61688de012,10,Masculino,Intento,Franco,ok,Lago Rosario,Lago Rosario,Normal
+1656090819.751573,c4857037-0987-424c-a2ec-0c61688de012,10,Masculino,Intento,Franco,error,Lago Pueyrredón,Lago Menéndez,Normal
+1656090820.0867176,c4857037-0987-424c-a2ec-0c61688de012,10,Masculino,Intento,Franco,error,Lago Pueyrredón,Lago Lácar,Normal
+1656090821.0778284,c4857037-0987-424c-a2ec-0c61688de012,10,Masculino,Intento,Franco,error,Lago Moquehue,Lago Rivadavia,Normal
+1656090821.3787894,c4857037-0987-424c-a2ec-0c61688de012,10,Masculino,Intento,Franco,error,Lago Quillén,Lago Falkner,Normal
+1656090821.840939,c4857037-0987-424c-a2ec-0c61688de012,10,Masculino,Intento,Franco,error,Lago Strobel,Lago Gutiérrez,Normal
+1656090822.668427,c4857037-0987-424c-a2ec-0c61688de012,10,Masculino,fin,Franco,finalizada,,,Normal
+1656090828.639791,f5312c99-70c4-47ce-9c18-bb1ce662a1aa,10,Masculino,inicio_partida,Franco,,,,Dificil
+1656090829.3591843,f5312c99-70c4-47ce-9c18-bb1ce662a1aa,10,Masculino,Intento,Franco,ok,Komaga-take (Japan),Komaga-take (Japan),Dificil
+1656090829.622286,f5312c99-70c4-47ce-9c18-bb1ce662a1aa,10,Masculino,Intento,Franco,error,Mayon (Philippines),Fuego (Guatemala),Dificil
+1656090830.2058077,f5312c99-70c4-47ce-9c18-bb1ce662a1aa,10,Masculino,Intento,Franco,ok,Merapi (Indonesia),Merapi (Indonesia),Dificil
+1656090830.5277975,f5312c99-70c4-47ce-9c18-bb1ce662a1aa,10,Masculino,Intento,Franco,error,Tangkubanparahu (Indonesia),Hekla (Iceland),Dificil
+1656090830.8642013,f5312c99-70c4-47ce-9c18-bb1ce662a1aa,10,Masculino,Intento,Franco,error,Fuego (Guatemala),Tungurahua (Ecuador),Dificil
+1656090831.1177979,f5312c99-70c4-47ce-9c18-bb1ce662a1aa,10,Masculino,Intento,Franco,ok,Semeru (Indonesia),Semeru (Indonesia),Dificil
+1656090831.4604607,f5312c99-70c4-47ce-9c18-bb1ce662a1aa,10,Masculino,Intento,Franco,error,Ofu-Olosega (United States),Daisetsu (Japan),Dificil
+1656090832.1003625,f5312c99-70c4-47ce-9c18-bb1ce662a1aa,10,Masculino,Intento,Franco,error,Asama (Japan),Soufriere Hills (Montserrat),Dificil
+1656090832.4338067,f5312c99-70c4-47ce-9c18-bb1ce662a1aa,10,Masculino,Intento,Franco,error,Sakura-jima (Japan),Merapi (Indonesia),Dificil
+1656090833.466813,f5312c99-70c4-47ce-9c18-bb1ce662a1aa,10,Masculino,Intento,Franco,error,Pinatubo (Philippines),Aso (Japan),Dificil
+1656090834.4686158,f5312c99-70c4-47ce-9c18-bb1ce662a1aa,10,Masculino,fin,Franco,finalizada,,,Dificil
+1656090842.2428136,a66ad97b-089c-49ee-9b2e-e2ccae937211,10,Masculino,inicio_partida,Agustin,,,,Normal
+1656090843.1357763,a66ad97b-089c-49ee-9b2e-e2ccae937211,10,Masculino,Intento,Agustin,error,Lago Yehuin,Lago Cholila,Normal
+1656090843.7678218,a66ad97b-089c-49ee-9b2e-e2ccae937211,10,Masculino,Intento,Agustin,error,Lago Epuyén,Lago Aluminé,Normal
+1656090844.1602037,a66ad97b-089c-49ee-9b2e-e2ccae937211,10,Masculino,Intento,Agustin,error,Lago Aluminé,Lago Mascardi,Normal
+1656090844.6058006,a66ad97b-089c-49ee-9b2e-e2ccae937211,10,Masculino,Intento,Agustin,error,Lago Tar,Lago Posadas,Normal
+1656090845.5042574,a66ad97b-089c-49ee-9b2e-e2ccae937211,10,Masculino,Intento,Agustin,error,Lago Menéndez,Lago Quillén,Normal
+1656090846.3935316,a66ad97b-089c-49ee-9b2e-e2ccae937211,10,Masculino,Intento,Agustin,error,Lago Posadas,Lago Futalaufquen,Normal
+1656090846.8325572,a66ad97b-089c-49ee-9b2e-e2ccae937211,10,Masculino,Intento,Agustin,ok,Lago Futalaufquen,Lago Futalaufquen,Normal
+1656090848.6648078,a66ad97b-089c-49ee-9b2e-e2ccae937211,10,Masculino,Omitir,Agustin,Omision,,Lago Quillén,Normal
+1656090849.3898277,a66ad97b-089c-49ee-9b2e-e2ccae937211,10,Masculino,Intento,Agustin,ok,Lago Rosario,Lago Rosario,Normal
+1656090850.4298277,a66ad97b-089c-49ee-9b2e-e2ccae937211,10,Masculino,Intento,Agustin,error,Lago Huechulafquen,Lago La Plata,Normal
+1656090851.464907,a66ad97b-089c-49ee-9b2e-e2ccae937211,10,Masculino,fin,Agustin,finalizada,,,Normal
+1656090862.6107688,714f7e41-f14d-428c-9d17-46da037ddd62,10,Masculino,inicio_partida,Agustin,,,,Dificil
+1656090863.4708347,714f7e41-f14d-428c-9d17-46da037ddd62,10,Masculino,Intento,Agustin,error,Lago Futalaufquen,Lago Quiroga Chico,Dificil
+1656090864.3389754,714f7e41-f14d-428c-9d17-46da037ddd62,10,Masculino,Intento,Agustin,error,Lago Yehuin,Lago Fagnano,Dificil
+1656090864.708011,714f7e41-f14d-428c-9d17-46da037ddd62,10,Masculino,Intento,Agustin,error,Lago Menéndez,Lago Salitroso o Sucio,Dificil
+1656090865.0288324,714f7e41-f14d-428c-9d17-46da037ddd62,10,Masculino,Intento,Agustin,error,Lago Moquehue,Lago Rosario,Dificil
+1656090865.854527,714f7e41-f14d-428c-9d17-46da037ddd62,10,Masculino,Intento,Agustin,error,Lago Correntoso,Lago Rosario,Dificil
+1656090866.1141677,714f7e41-f14d-428c-9d17-46da037ddd62,10,Masculino,Intento,Agustin,error,Lago Tar,Lago La Plata,Dificil
+1656090866.5088456,714f7e41-f14d-428c-9d17-46da037ddd62,10,Masculino,Intento,Agustin,error,Lago Buenos Aires,Lago Nahuel Huapi,Dificil
+1656090866.9043164,714f7e41-f14d-428c-9d17-46da037ddd62,10,Masculino,Intento,Agustin,error,Lago Quillén,Lago Falkner,Dificil
+1656090868.516285,714f7e41-f14d-428c-9d17-46da037ddd62,10,Masculino,fin,Agustin,cancelada,,,Dificil
+1656090887.3548405,ef8abe8d-4e0d-4a87-9c8d-36feb5e1874a,10,Masculino,inicio_partida,Agustin,,,,Dificil
+1656090889.332858,ef8abe8d-4e0d-4a87-9c8d-36feb5e1874a,10,Masculino,Intento,Agustin,error,Antonino La Gumina,Widen Saucedo,Dificil
+1656090889.745859,ef8abe8d-4e0d-4a87-9c8d-36feb5e1874a,10,Masculino,Intento,Agustin,error,Ousseynou Thioune,Geovanny Nazareno,Dificil
+1656090890.4128609,ef8abe8d-4e0d-4a87-9c8d-36feb5e1874a,10,Masculino,Intento,Agustin,error,Darnell Fisher,Maxim De Cuyper,Dificil
+1656090890.867834,ef8abe8d-4e0d-4a87-9c8d-36feb5e1874a,10,Masculino,Intento,Agustin,ok,Ryota Hayasaka,Ryota Hayasaka,Dificil
+1656090891.162872,ef8abe8d-4e0d-4a87-9c8d-36feb5e1874a,10,Masculino,Intento,Agustin,error,Emmanuel Banda,Wu Xi,Dificil
+1656090892.1474187,ef8abe8d-4e0d-4a87-9c8d-36feb5e1874a,10,Masculino,Intento,Agustin,error,Marvin Ducksch,Jackson Rodríguez,Dificil
+1656090892.4508364,ef8abe8d-4e0d-4a87-9c8d-36feb5e1874a,10,Masculino,Intento,Agustin,ok,Maurício,Maurício,Dificil
+1656090892.7063859,ef8abe8d-4e0d-4a87-9c8d-36feb5e1874a,10,Masculino,Intento,Agustin,error,Nicolas Cozza,Eltildo Correia,Dificil
+1656090893.1779466,ef8abe8d-4e0d-4a87-9c8d-36feb5e1874a,10,Masculino,Intento,Agustin,ok,Pawel Cibicki,Pawel Cibicki,Dificil
+1656090894.1808372,ef8abe8d-4e0d-4a87-9c8d-36feb5e1874a,10,Masculino,Intento,Agustin,error,Steven Davies,Ché Nunnely,Dificil
+1656090895.408104,ef8abe8d-4e0d-4a87-9c8d-36feb5e1874a,10,Masculino,fin,Agustin,finalizada,,,Dificil
