@@ -1,8 +1,10 @@
 import PySimpleGUI as sg
 from src.objects.partida import Partida
 from .layouts.layout_juego import layouts, config_inicial
-from .handlers.handler_juego import abrir_configuracion, actualizar_tiempo, eventos
-from .handlers.handler_juego import inicializacion_partida, registro_jugadas, actualizacion
+from .handlers.handler_juego import abrir_configuracion
+from .handlers.handler_juego import actualizar_tiempo, eventos
+from .handlers.handler_juego import inicializacion_partida
+from .handlers.handler_juego import registro_jugadas, actualizacion
 from roots import ROOT_PUNTAJES
 from .handlers.handler_perfiles import datos_de_perfiles, obtener_datos_nick
 import csv
@@ -14,7 +16,8 @@ def guardar_partida(perfil_actual, estado, puntaje, dificultad):
     informacion = obtener_datos_nick(perfil_actual, datos)
     with open(ROOT_PUNTAJES, 'a', encoding='utf_8') as archivo:
         writer = csv.writer(archivo)
-        writer.writerow([perfil_actual, informacion[0]["genero"], estado, puntaje, dificultad])
+        writer.writerow([perfil_actual, informacion[0]["genero"],
+                        estado, puntaje, dificultad])
 
 
 def act_completa(ventana, cant, header, datos):

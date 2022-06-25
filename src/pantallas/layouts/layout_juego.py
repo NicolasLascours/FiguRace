@@ -1,7 +1,7 @@
 import PySimpleGUI as sg
 import random
-from ..handlers.handler_juego import convert, abrir_volcanes, abrir_lagos, abrir_fifa
-
+from ..handlers.handler_juego import convert, abrir_volcanes, abrir_lagos
+from ..handlers.handler_juego import abrir_fifa
 
 # layout de la pantalla del juego
 
@@ -34,14 +34,16 @@ def layouts(data, lista_data, lista_carac, config):
     """
     datos, header, nom = eleccion(data)
     cant = config[config["Dificultad"]]
-    correcta, lista_data, lista_carac = config_inicial(lista_data, datos, cant, lista_carac)
+    correcta, lista_data, lista_carac = config_inicial(lista_data, datos,
+                                                       cant, lista_carac)
     layout = [
         [sg.Text(nom, key='-TITULO-'), sg.Text(' '*74), sg.Text('Dificultad')],
         [sg.Text(' '*93), sg.Text(config['Dificultad'])],
         [sg.Text('')],
         [sg.Text('Ronda actual: 1', key='-RONDAS-'),
-        sg.Text('Cantidad de rondas {}'.format(config['Rondas'])),
-        sg.Text('Tiempo: {}'.format(convert(int(config['Tiempo']))), key='-TIEMPO-')],
+                     sg.Text('Cantidad de rondas {}'.format(config['Rondas'])),
+        sg.Text('Tiempo: {}'.format(convert(int(config['Tiempo']))),
+                                                key='-TIEMPO-')],
         [sg.Text(' '*45), sg.Text('Puntaje: 0', key='-Puntaje-')],
         [sg.Text('Caracteristicas:')],
         [sg.Text(f'{header[0]}: {lista_carac[0]}', key="CARAC 0")],
