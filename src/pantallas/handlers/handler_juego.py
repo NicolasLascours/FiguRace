@@ -72,18 +72,22 @@ def registro_jugadas(evento, perfil_actual, correcta, partida):
     config = abrir_configuracion()
     with open(ROOT_REGISTRO, 'a', encoding='utf_8') as reg:
         writer = csv.writer(reg)
-        if evento == '__TIMEOUT__':
-            writer.writerow([time.time(), partida.uuid, partida.cant_rondas, 'Intento', perfil_actual, "timeout", correcta[5], config["Dificultad"]])
-        elif evento == "Correcta":
-            writer.writerow([time.time(), partida.uuid, partida.cant_rondas,'Intento', perfil_actual, "ok", correcta[5], config["Dificultad"]])
-        elif evento == "Pasar":
-            writer.writerow([time.time(), partida.uuid, partida.cant_rondas,'Intento', perfil_actual, "Omision", correcta[5], config["Dificultad"]])
-        elif evento == "Incorrecta":
-            writer.writerow([time.time(), partida.uuid, partida.cant_rondas,'Intento', perfil_actual, "error", correcta[5], config["Dificultad"]])
-        elif evento == "Abandonar el juego" or evento == sg.WIN_CLOSED:
-            writer.writerow([time.time(), partida.uuid, partida.cant_rondas,'fin', perfil_actual, "cancelada", '', config["Dificultad"]])
+        if partida.ronda_actual <= partida.cant_rondas:
+            if evento == '__TIMEOUT__':
+                writer.writerow([time.time(), partida.uuid, partida.cant_rondas, 'Intento', perfil_actual, "timeout", correcta[5], config["Dificultad"]])
+            elif evento == "Correcta":
+                writer.writerow([time.time(), partida.uuid, partida.cant_rondas,'Intento', perfil_actual, "ok", correcta[5], config["Dificultad"]])
+            elif evento == "Pasar":
+                writer.writerow([time.time(), partida.uuid, partida.cant_rondas,'Intento', perfil_actual, "Omision", correcta[5], config["Dificultad"]])
+            elif evento == "Incorrecta":
+                writer.writerow([time.time(), partida.uuid, partida.cant_rondas,'Intento', perfil_actual, "error", correcta[5], config["Dificultad"]])
+            elif evento == "Abandonar el juego" or evento == sg.WIN_CLOSED:
+                writer.writerow([time.time(), partida.uuid, partida.cant_rondas,'fin', perfil_actual, "cancelada", '', config["Dificultad"]])
         else:
-            writer.writerow([time.time(), partida.uuid, partida.cant_rondas,'fin', perfil_actual, "finalizada", '', config["Dificultad"]])
+            if evento == '__TIMEOUT__':
+                writer.writerow([time.time(), partida.uuid, partida.cant_rondas,'fin', perfil_actual, "timeout", '', config["Dificultad"]])
+            else:
+                writer.writerow([time.time(), partida.uuid, partida.cant_rondas,'fin', perfil_actual, "finalizada", '', config["Dificultad"]])
 
 
 def inicializacion_partida(perfil_actual, dif, uui):
@@ -105,12 +109,13 @@ def convert(seconds):
     return "%02d:%02d" % (minutes, seconds)
 
 
-def actualizar_tiempo(ventana, partida):
+def actualizar_tiempo(ventana, partida, evento, perfil_actual, correcta):
     """ Funcion que actualiza el tiempo y en cazo de terminarse
     avanza a la siguiente ronda y reinicia el tiempo """
     transcurrido = int(time.time() - partida.tiempo_ronda_inicial)
     restante = partida.tiempo_por_ronda - transcurrido
     if restante <= 0:
+        registro_jugadas(evento, perfil_actual, correcta, partida)
         ventana['-TIEMPO-'].update(f'Tiempo: {convert(0)}')
         partida.incrementar_ronda()
         if partida.ronda_actual <= partida.cant_rondas:
@@ -145,9 +150,9 @@ def eventos(evento, ventana, partida, correcta, lista_data, perfil_actual):
     """
     if evento == 'Pasar':
         if partida.ronda_actual <= partida.cant_rondas:
+            registro_jugadas(evento, perfil_actual, correcta, partida)
             actualizar_partida(ventana, partida)
             ventana["-Puntaje-"].update(f'Puntaje: {partida.puntaje()}')
-            registro_jugadas(evento, perfil_actual, correcta, partida)
     elif (evento == 'OPCION 0' or evento == 'OPCION 1' or evento == 'OPCION 2' 
             or evento == 'OPCION 3' or evento == 'OPCION 4'): 
             respuesta = int(evento[-1])

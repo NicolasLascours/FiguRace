@@ -47,12 +47,11 @@ def comenzar(perfil_actual, data):
             registro_jugadas(evento[0], perfil_actual, correcta,  partida)
             guardar_partida(perfil_actual, "Cancelada", partida.puntaje(), config["Dificultad"])
             break
-        restante = actualizar_tiempo(ventana, partida)
+        restante = actualizar_tiempo(ventana, partida, evento[0], perfil_actual, correcta)
         if evento[0] == "__TIMEOUT__" and restante <= 0:
-           registro_jugadas(evento[0], perfil_actual, correcta, partida)
            correcta, lista_data, lista_carac = act_completa(ventana, cant, header, datos)
     sg.popup_ok('La cantidad de puntos obtenidos es: ', partida.puntaje())
     if partida.ronda_actual > partida.cant_rondas:
-        registro_jugadas('Fin', perfil_actual, correcta, partida)
+        registro_jugadas(evento[0], perfil_actual, correcta, partida)
         guardar_partida(perfil_actual, "Finalizada", partida.puntaje(), config["Dificultad"])
     ventana.close()
