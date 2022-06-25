@@ -22,6 +22,10 @@ def elegir_perfil():
 
 
 def eleccion_data():
+    """
+    Funcion que da diseño a la interfaz
+    para elegir los dataset
+    """
     event, values = sg.Window('Elija un dataset para jugar', [[sg.Text('Elegir uno->'), sg.Listbox(['Volcan', 'Fifa', 'Lagos'], 
     size=(20, 3), key='Eleccion')], [sg.Button('Ok')]]).read(close=True)
     return event, values
@@ -46,6 +50,10 @@ def cargar_config(dif):
 
 
 def creacion_csv():
+    """
+    Funcion que crea el archivo csv de 
+    los registros de jugadas
+    """
     with open('registro.csv', 'w') as reg:
         writer = csv.writer(reg)
         writer.writerow(["Timestamp", "ID", "Objectos a adivinar", "Evento", "Usuario", "Estado", "Respuesta", "Nivel"])
