@@ -8,6 +8,10 @@ from roots import ROOT_REGISTRO
 
 
 def start():
+    """
+    Llamada incial para poder empezar con 
+    el juego
+    """
     #creacion del archivo csv con el registro de las partidas
     if not exists(ROOT_REGISTRO):
         creacion_csv()

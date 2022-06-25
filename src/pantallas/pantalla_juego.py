@@ -21,6 +21,10 @@ def guardar_partida(perfil_actual, estado, puntaje, dificultad):
 
 
 def act_completa(ventana, cant, header, datos):
+    """
+    Funcion que realiza la actualizacion completa
+    de la pantalla
+    """
     lista_data = []
     lista_carac = ['', '', '', '', '']
     correcta, lista_data, lista_carac = config_inicial(lista_data, datos, cant, lista_carac)
@@ -32,7 +36,6 @@ def comenzar(perfil_actual, data):
     """
     Funcion que realiza la ejecucion de la pantalla del juego
     """
-    
     # ventana del juego
     lista_data = []
     lista_carac = ['', '', '', '', '']

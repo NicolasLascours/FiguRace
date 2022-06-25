@@ -87,6 +87,10 @@ def registro_jugadas(evento, perfil_actual, correcta, partida):
 
 
 def inicializacion_partida(perfil_actual, dif, uui):
+    """
+    Funcion que guarda el primer evento de dar inicio
+    a la partida nueva
+    """
     config = abrir_configuracion()
     with open(ROOT_REGISTRO, 'a') as reg:
         writer = csv.writer(reg)
@@ -124,6 +128,9 @@ def actualizar_tiempo(ventana, partida):
 
 
 def actualizar_partida(ventana, partida):
+    """
+    Funcion que actualiza la pantalla del juego
+    """
     partida.incrementar_ronda()
     if partida.ronda_actual <= partida.cant_rondas:
         ventana['-RONDAS-'].update(f'Ronda actual: {partida.ronda_actual}')
@@ -132,6 +139,10 @@ def actualizar_partida(ventana, partida):
 
 
 def actualizacion(ventana, lista_data, cant, header, lista_carac):
+    """
+    Funcion que actualiza las caracteristicas y opciones
+    para la siguiente ronda
+    """
     for i in range(5):
         ventana["OPCION "+str(i)].update(f'{lista_data[i][5]}')
     for i in range(int(cant)):

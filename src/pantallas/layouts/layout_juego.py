@@ -6,6 +6,10 @@ from ..handlers.handler_juego import abrir_fifa
 # layout de la pantalla del juego
 
 def config_inicial(lista_data, datos, cant, lista_carac):
+    """
+    Funcion que realiza una configuracion
+    inicial de la pantalla del juego
+    """
     for i in range(5):
         lista_data.append(random.choice(list(datos)))
     correcta = lista_data[random.randint(0, 4)]
@@ -15,6 +19,9 @@ def config_inicial(lista_data, datos, cant, lista_carac):
 
 
 def eleccion(data):
+    """
+    Funcion que determina que dataset se eligio
+    """
     if data['Eleccion'][0] == 'Volcan':
         header, datos = abrir_volcanes()
         nom = "Volcanes!!"
